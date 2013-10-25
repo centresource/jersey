@@ -4,7 +4,7 @@
 //**** Globals ****
 $base-value: 12;
 $base-value-tablet: 13;
-
+$base-border-radius: 4px;
 
 
 //**** Typography ****
@@ -12,10 +12,10 @@ $base-font-size:         #{$base-value + "px"};
 $base-font-size-tablet:  #{$base-value-tablet + "px"};
 $base-line-height:       1.5;
 
-$serif-font-family:      Georgia, Times, serif;
-$sans-serif-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$base-font-family:       $sans-serif-font-family;
-$header-font-family:     $base-font-family;
+$serif-font-family: Georgia, Times, serif;
+$sans-serif-font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$base-font-family: $sans-serif-font-family;
+$header-font-family: 'Paytone One', sans-serif;
 
 
 
@@ -28,7 +28,7 @@ $mobile-only: max-width 699px; // Avoid using this
 
 
 //**** Neat Grid ****
-$max-width: 60.45em;               // Max-width of the outer container
+$max-width: 90.45em;               // Max-width of the outer container
 // $default-feature: min-width;    // Default @media feature for the breakpoint() mixin
 // $column: golden-ratio(1em, 3);  // Column width
 // $gutter: golden-ratio(1em, 1);  // Gutter between each two columns
@@ -43,7 +43,7 @@ $max-width: 60.45em;               // Max-width of the outer container
 
 
 //**** Grays ****
-$black:                 #000;
+$black:                 #111;
 $gray-darker:           #222;
 $gray-dark:             #333;
 $gray:                  #555;
@@ -55,14 +55,15 @@ $white:                 #fff;
 
 //**** Colors ****
 $blue:                  #002447;
+$beige:									#ececec;
 $green:                 #46a546;
 $red:                   #9d261d;
 $yellow:                #fe9800;
-$orange:                #f89406;
+$orange:                #ff8549;
+$orange-light:          #fe925d;
+$orange-lightest:       #fea87d;
 $pink:                  #c3325f;
 $purple:                #7a43b6;
-
-
 
 //**** Selectors ****
 $anchors-list: 'a',

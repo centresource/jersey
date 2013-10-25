@@ -1,1 +1,28 @@
 /**** Library ****/
+.page {
+	@include outer-container();
+}
+
+.logo-cs {
+  background: url('../images/logo-cs.png') no-repeat 0 -38px;
+  display: inline-block;
+  height: 26px;
+  margin: 0;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 216px;
+  @include hide-text;
+
+  @include hidpi(2) {
+    background-image: url('../images/logo-cs@2x.png');
+    background-size: 216px 74px;
+  }
+
+  @include media($tablet) {
+    height: 37px;
+  }
+
+	a {
+		@extend %block-link;
+	}
+}
