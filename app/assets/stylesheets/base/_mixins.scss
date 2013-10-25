@@ -98,6 +98,57 @@
   @include prefixer(mask-image, url($image), webkit moz spec)
 }
 
+// Add styles to button variants
+@mixin button-variant($color, $background, $border) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active,
+  &.active {
+    background-color: $background;
+    border-color: $border;
+    color: $color;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+}
+
+// Add styles to button variants
+@mixin link-variant($base-color, $hover-color: darken($base-color, 10%)) {
+  color: $base-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $base-color;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    color: $hover-color;
+  }
+}
+
 // Accepts styling for placeholder content
 @mixin placeholder {
   &.placeholder { @content }

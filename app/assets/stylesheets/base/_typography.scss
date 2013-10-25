@@ -1,5 +1,20 @@
 /**** Typography ****/
-#{$anchors} {}
+.link-big {
+  font-size: em(30, $base-value);
+}
+
+.link-orange {
+  @include link-variant($orange);
+}
+
+.link-white {
+  @include link-variant($white, $gray-light);
+}
+
+.link-orange-big {
+  @extend .link-big;
+  @extend .link-orange;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: $black;

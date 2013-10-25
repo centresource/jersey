@@ -46,3 +46,37 @@ dd {
     list-style: none;
   }
 }
+
+.list-tree {
+  @extend %list-unstyled;
+
+  li {
+    border-left: 1px solid $gray-light;
+    padding: 0 0 1em 2em;
+    position: relative;
+
+    &:before {
+      background: $gray-light;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 26px;
+      width: 19px;
+    }
+
+    &:last-child:after {
+      background: $beige;
+      content: '';
+      height: calc(100% - 19px);
+      left: -1px;
+      position: absolute;
+      top: 27px;
+      width: 1px;
+    }
+  }
+
+  a {
+    @extend .link-orange-big;
+  }
+}
