@@ -1,6 +1,6 @@
 /**** Library ****/
 .page {
-	@include outer-container();
+  @include outer-container();
 }
 
 .logo-cs {
@@ -22,7 +22,18 @@
     height: 37px;
   }
 
-	a {
-		@extend %block-link;
-	}
+  a {
+    @extend %block-link;
+  }
+}
+
+.content-section {
+  @include span-columns(12);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #d6d6d6;
+  @include span-columns(12);
 }

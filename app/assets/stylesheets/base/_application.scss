@@ -20,8 +20,8 @@
  * every page, it probably shouldn't be in this file.
  * -----------------------------------------------------------------------------*/
 body {
-	background-color: $beige;
-	color: $black;
+  background-color: $beige;
+  color: $black;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -33,15 +33,11 @@ body {
 }
 
 .header-primary {
-	background-color: $gray-darker;
-	border-radius: $base-border-radius;
-	padding: 1.5em;
-	margin: 2em 0;
+  background-color: $gray-darker;
+  border-radius: $base-border-radius;
+  padding: 1.5em;
+  margin: 2em 0;
 }
-
-.content-primary {}
-
-.footer-primary {}
 
 a, a:visited {
   color: $gray-dark;
@@ -53,84 +49,91 @@ a:hover, a:active {
 }
 
 .nav-primary {
-	@include span-columns(3 of 12);
+  @include span-columns(3 of 12);
 }
 
 .nav-menu {
-	border-radius: $base-border-radius;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
+  border-radius: $base-border-radius;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
 
-	li {
-		background-color: $white;
+  li {
+    background-color: $white;
 
-		&:hover:not(.active) {
-			background-color: $orange-light;
+    &:hover:not(.active) {
+      background-color: $orange-light;
 
-			a, a:visited {
-				color: $white;
-			}
-		}
+      a, a:visited {
+        color: $white;
+      }
+    }
 
-		&:last-child {
-			border-bottom: 0;
-		}
-	}
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
 
-	a {
-		@extend %block-link;
-		padding: .75em 1em .75em 45px;
-		position: relative;
-	}
+  a {
+    @extend %block-link;
+    padding: .75em 1em .75em 45px;
+    position: relative;
+  }
 
-	.active {
-		background-color: $orange;
-		border-bottom: 1px solid $orange-lightest;
+  .active {
+    background-color: $orange;
+    border-bottom: 1px solid $orange-lightest;
 
-		a, a:visited {
-			color: $white;
-		}
-	}
+    a, a:visited {
+      color: $white;
+    }
+  }
 
-	$nav-icon-size: 14px;
+  $nav-icon-size: 14px;
 
-	.fa {
-		font-size: $nav-icon-size;
-		left: $nav-icon-size;
-		margin-top: -#{$nav-icon-size / 2};
-		position: absolute;
-		top: 50%;
-	}
+  .fa {
+    font-size: $nav-icon-size;
+    left: $nav-icon-size;
+    margin-top: -#{$nav-icon-size / 2};
+    position: absolute;
+    top: 50%;
+  }
 
-	.messages.active ~ .messages-sub {
-		@extend .active;
-	}
+  .messages.active ~ .messages-sub {
+    @extend .active;
+  }
 }
 
 .nav-action {
-	border-bottom: 1px solid #e6e6e6;
- 	font-size: em(16, $base-value);
-	font-weight: bold;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: em(16, $base-value);
+  font-weight: bold;
 }
 
 .nav-action-sub {
-	font-size: em(12, $base-value);
+  font-size: em(12, $base-value);
 
-	&.active {
-		background-color: $orange-light;
-		border: 0;
+  &.active {
+    background-color: $orange-light;
+    border: 0;
 
-		&:hover {
-			background-color: $orange;
-		}
-	}
+    &:hover {
+      background-color: $orange;
+    }
+  }
 
-	&.last {
-		border-bottom: 1px solid #e6e6e6;
+  &.last {
+    border-bottom: 1px solid #e6e6e6;
 
-		&.active {
-			border-bottom: 1px solid $orange-lightest;
-		}
-	}
+    &.active {
+      border-bottom: 1px solid $orange-lightest;
+    }
+  }
 }
+
+.content-primary {
+  @include span-columns(9 of 12);
+  @include omega();
+}
+
+.footer-primary {}
