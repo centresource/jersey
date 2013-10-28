@@ -31,7 +31,7 @@
   @include span-columns(12);
   padding: 2em 0;
 
-  h2 {
+  h2:first-of-type {
     @extend .flush-top;
   }
 }
