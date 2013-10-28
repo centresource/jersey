@@ -29,6 +29,11 @@
 
 .content-section {
   @include span-columns(12);
+  padding: 2em 0;
+
+  h2 {
+    @extend .flush-top;
+  }
 }
 
 .thirds {
@@ -37,7 +42,8 @@
 }
 
 hr {
-  background: $gray-light;
+  background: $base-border-color;
+  margin: 0;
   border: 0;
   height: 1px;
   @include span-columns(12);

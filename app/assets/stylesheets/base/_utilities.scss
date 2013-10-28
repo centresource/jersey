@@ -66,3 +66,13 @@
     display: none;
   }
 }
+
+.redacted {
+  background-color: $gray-light;
+  color: $gray-light;
+
+  &:hover, &:active {
+    background-color: $gray-lighter;
+    color: $black;
+  }
+}

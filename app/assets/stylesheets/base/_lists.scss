@@ -30,6 +30,18 @@ dd {
   }
 }
 
+.dl-primary {
+  dt {
+    font-size: em(13, $base-value);
+    font-weight: normal;
+  }
+
+  dd {
+    font-size: em(19, $base-value);
+    margin: 0 0 .5em;
+  }
+}
+
 %list-horizontal {
   margin: 0;
 
@@ -47,16 +59,81 @@ dd {
   }
 }
 
+%flex-column-list {
+  @include outer-container;
+
+  /* if only one column exists, make it full width */
+  %flex-col {
+    @include span-columns(12 of 12, collapse);
+  }
+
+  /* if two columns exist, make them both half width */
+  %flex-col:first-child:nth-last-child(2),
+  %flex-col:first-child:nth-last-child(2) ~ %flex-col {
+    @include span-columns(6 of 12, collapse);
+  }
+
+  /* three columns... */
+  %flex-col:first-child:nth-last-child(3),
+  %flex-col:first-child:nth-last-child(3) ~ %flex-col {
+    @include span-columns(4 of 12, collapse);
+  }
+
+  /* four columns... */
+  %flex-col:first-child:nth-last-child(4),
+  %flex-col:first-child:nth-last-child(4) ~ %flex-col {
+    @include span-columns(3 of 12, collapse);
+  }
+}
+
+.list-primary {
+  font-size: em(18, $base-value);
+  margin: 0;
+
+  li {
+    margin: .5em 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1em;
+  }
+}
+
+.list-column-row {
+  @extend %flex-column-list;
+
+  .list-col {
+    @extend %flex-col;
+    border-right: 1px solid $base-border-color;
+    padding: 0 2em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
 .list-tree {
   @extend %list-unstyled;
 
   li {
-    border-left: 1px solid $gray-light;
+    border-left: 1px solid $base-border-color;
     padding: 0 0 1em 2em;
     position: relative;
 
     &:before {
-      background: $gray-light;
+      background: $base-border-color;
       content: '';
       height: 1px;
       left: 0;

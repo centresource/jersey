@@ -4,7 +4,6 @@
 //**** Globals ****
 $base-value: 12;
 $base-value-tablet: 13;
-$base-border-radius: 4px;
 
 
 //**** Typography ****
@@ -75,3 +74,8 @@ $anchors: ();
 @each $anchor in $anchors-list {
   $anchors: append($anchors, unquote($anchor), comma);
 }
+
+
+//**** Borders ****
+$base-border-color: $gray-lighter;
+$base-border-radius: 4px;
