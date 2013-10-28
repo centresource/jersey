@@ -58,33 +58,32 @@ a:hover, a:active {
   overflow: hidden;
   padding: 0;
 
-  li {
+  a, a:visited {
+    @extend %block-link;
     background-color: $white;
+    border-bottom: 1px solid #e6e6e6;
+    padding: .75em 1em .75em 45px;
+    position: relative;
 
     &:hover:not(.active) {
-      background-color: $orange-light;
-
-      a, a:visited {
-        color: $white;
-      }
+      background-color: $orange;
+      color: $white;
     }
+  }
+
+  .nav-action {
+    font-size: em(16, $base-value);
+    font-weight: bold;
 
     &:last-child {
       border-bottom: 0;
     }
   }
 
-  a {
-    @extend %block-link;
-    padding: .75em 1em .75em 45px;
-    position: relative;
-  }
-
   .active {
-    background-color: $orange;
-    border-bottom: 1px solid $orange-lightest;
-
     a, a:visited {
+      background-color: $orange-light;
+      border-bottom: 1px solid #e6e6e6;
       color: $white;
     }
   }
@@ -98,35 +97,17 @@ a:hover, a:active {
     position: absolute;
     top: 50%;
   }
-
-  .messages.active ~ .messages-sub {
-    @extend .active;
-  }
 }
 
-.nav-action {
-  border-bottom: 1px solid #e6e6e6;
-  font-size: em(16, $base-value);
-  font-weight: bold;
-}
+.nav-submenu {
+  @extend .nav-menu;
+  border-radius: 0;
 
-.nav-action-sub {
-  font-size: em(12, $base-value);
+  .nav-action-sub {
+    font-size: 12px;
 
-  &.active {
-    background-color: $orange-light;
-    border: 0;
-
-    &:hover {
-      background-color: $orange;
-    }
-  }
-
-  &.last {
-    border-bottom: 1px solid #e6e6e6;
-
-    &.active {
-      border-bottom: 1px solid $orange-lightest;
+    &:not(:last-child) a {
+      border: 0;
     }
   }
 }
