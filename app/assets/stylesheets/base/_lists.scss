@@ -123,6 +123,27 @@ dd {
   }
 }
 
+.wireframe-column-row {
+  @extend %flex-column-list;
+
+  .wireframe-col {
+    @extend %flex-col;
+    padding: 0 2em;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
 
 .list-tree {
   @extend %list-unstyled;
