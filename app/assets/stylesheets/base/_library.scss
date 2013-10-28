@@ -48,3 +48,32 @@ hr {
   height: 1px;
   @include span-columns(12);
 }
+
+.screenshot-container {
+  @include fill-parent();
+
+  .screenshot {
+    border: 1px solid $base-border-color;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+  }
+
+  @include media($desktop) {
+    background: url('../images/imac-blank.png') no-repeat top left;
+    border: 0;
+    height: 532px;
+    margin: 0 auto;
+    width: 716px;
+    position: relative;
+
+    // target height: 660w, 370h
+    .screenshot {
+      height: 370px;
+      left: 28px;
+      position: absolute;
+      top: 28px;
+      width: 660px;
+    }
+  }
+}
