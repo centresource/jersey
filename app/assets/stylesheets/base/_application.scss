@@ -34,9 +34,17 @@ body {
 
 .header-primary {
   background-color: $gray-darker;
-  border-radius: $base-border-radius;
   padding: 1.5em;
-  margin: 2em 0;
+  margin: 0;
+
+  @include media($desktop) {
+    margin: 0 0 2em;
+  }
+
+  @include media($large-desktop) {
+    margin: 2em 0;
+    border-radius: $base-border-radius;
+  }
 }
 
 a, a:visited {
@@ -49,11 +57,15 @@ a:hover, a:active {
 }
 
 .nav-primary {
-  @include span-columns(3 of 12);
+  @include fill-parent();
+
+  @include media($desktop) {
+    @include span-columns(3 of 12);
+  }
 }
 
 .nav-menu {
-  border-radius: $base-border-radius;
+  border-radius: 0;
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -97,6 +109,10 @@ a:hover, a:active {
     position: absolute;
     top: 50%;
   }
+
+  @include media($desktop) {
+    border-radius: $base-border-radius;
+  }
 }
 
 .nav-submenu {
@@ -113,8 +129,14 @@ a:hover, a:active {
 }
 
 .content-primary {
-  @include span-columns(9 of 12);
-  @include omega();
+  padding: 1.5em;
+  @include fill-parent();
+
+  @include media($desktop) {
+    padding: 0;
+    @include span-columns(9 of 12);
+    @include omega();
+  }
 }
 
 .footer-primary {}

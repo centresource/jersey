@@ -19,10 +19,11 @@ $header-font-family: 'Paytone One', sans-serif;
 
 
 //**** Breakpoints (mobile first) ****
-$desktop:     min-width 850px;
-$tablet:      min-width 700px;
-$tablet-only: min-width 700px max-width 849px;
-$mobile-only: max-width 699px; // Avoid using this
+$large-desktop:     min-width 1200px;
+$desktop:           min-width 850px;
+$tablet:            min-width 700px;
+$tablet-only:       min-width 700px max-width 849px;
+$mobile-only:       max-width 699px; // Avoid using this
 
 
 
