@@ -1,17 +1,3 @@
 source "http://rubygems.org"
 
-gem "bourbon", "~>3.1.8"
-gem "coffee-script"
-gem "guard"
-gem "guard-livereload"
-gem "json", :platforms => :ruby_18
-gem "neat", "~>1.4.0"
-gem "rack-livereload"
-gem "rb-fchange"
-gem "rb-fsevent"
-gem "rb-inotify"
-gem "sass"
-gem "sprockets"
-gem "uglifier"
-gem "whiskey_disk"
-gem "yui-compressor", "~> 0.11.0"
+gem 'sass', '>=3.2'
