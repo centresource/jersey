@@ -1,0 +1,33 @@
+{
+  "name": "jersey",
+  "version": "0.0.1",
+  "homepage": "https://github.com/centresource/jersey",
+  "authors": [
+    "David Calhoun <dcalhoun@centresource.com>"
+  ],
+  "description": "Centresource app styleguide.",
+  "main": "dist/_jersey.scss",
+  "keywords": [
+    "centresource",
+    "styleguide"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app",
+    "Gemfile",
+    "Gemfile.lock",
+    "jersey.gemspec"
+  ],
+  "dependencies": {
+    "normalize-scss": "~2.1.2",
+    "bourbon": "~3.1.8",
+    "neat": "~1.4.0",
+    "font-awesome": "~4.0.1"
+  }
+}
