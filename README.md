@@ -47,6 +47,3 @@ Include jersey in your main Sass file:
 ````scss
 @import 'jersey/jersey';
 ````
-
-## Credits
-Thanks to Josh Sullivan, Derek Blank & David Calhoun.
