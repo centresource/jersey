@@ -20,9 +20,11 @@ The following font families are used within Centresource Jersey. You are not req
 
 ### Installation
 #### For Rails
+**The gem has not yet been created. Rails installation is not fully ready.**
+
 Install Jersey using bundler. In your Gemfile:
 ````ruby
-gem 'jersey', '~>0.0.1'
+gem 'jersey', '~>0.1.0'
 ````
 
 Then run:
