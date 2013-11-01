@@ -16,14 +16,16 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
     "tests",
     "app",
     "Gemfile",
     "Gemfile.lock",
     "jersey.gemspec",
-    "CONTRIBUTING"
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
   ],
   "dependencies": {
     "normalize-scss": "~2.1.2",
