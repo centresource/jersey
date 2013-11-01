@@ -103,7 +103,7 @@ module.exports = function (grunt) {
         bundleExec: true,
         debugInfo: false,
         lineNumbers: false,
-        loadPath: 'bower_components'
+        loadPath: 'app/_bower_components'
       },
       dist: {
         files: [{
@@ -233,7 +233,7 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore
             '!**/_*{,/**}'
             // Explicitly add any files your site needs for distribution here
-            //'_bower_components/jquery/jquery.js',
+            //'_app/_bower_components/jquery/jquery.js',
             //'favicon.ico',
             //'apple-touch*.png'
           ],

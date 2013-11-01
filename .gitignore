@@ -35,7 +35,7 @@ Gemfile.lock
 *.zip
 
 # Ignore for Jersey #
-bower_components
+app/_bower_components
 dist
 node_modules
 .tmp
