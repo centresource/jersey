@@ -4,7 +4,7 @@
 }
 
 .logo-cs {
-  background: url('../images/logo-cs.png') no-repeat 0 -38px;
+  background: url('../img/logo-cs.png') no-repeat 0 -38px;
   display: inline-block;
   height: 26px;
   margin: 0;
@@ -14,7 +14,7 @@
   @include hide-text;
 
   @include hidpi(2) {
-    background-image: url('../images/logo-cs@2x.png');
+    background-image: url('../img/logo-cs@2x.png');
     background-size: 216px 74px;
   }
 
@@ -60,7 +60,7 @@ hr {
   }
 
   @include media($desktop) {
-    background: url('../images/imac-blank.png') no-repeat top left;
+    background: url('../img/imac-blank.png') no-repeat top left;
     border: 0;
     height: 532px;
     margin: 0 auto;
