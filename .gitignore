@@ -36,6 +36,5 @@ Gemfile.lock
 
 # Ignore for Jersey #
 app/_bower_components
-dist
 node_modules
 .tmp

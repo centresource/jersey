@@ -1,0 +1,103 @@
+/**** Typography ****/
+.link-big {
+  font-size: em(30, $base-value);
+}
+
+.link-orange {
+  @include link-variant($orange);
+}
+
+.link-white {
+  @include link-variant($white, $gray-light);
+}
+
+.link-orange-big {
+  @extend .link-big;
+  @extend .link-orange;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $black;
+  font-weight: normal;
+  margin: #{$base-line-height * 0.5} 0 #{$base-line-height * 0.5};
+  @include transition(color 0.4s linear);
+}
+
+h1, .h1 {
+  font-family: $base-font-family;
+  font-size: em(60, $base-value);
+  font-weight: bold;
+  line-height: 1.333em;
+
+  &.mega {
+    font-family: $header-font-family;
+    font-size: $base-value-tablet;
+    font-size: em(45, $base-value-tablet);
+    font-weight: 400;
+    line-height: 1.25em;
+
+    @include media($tablet) {
+      font-size: em(50, $base-value-tablet);
+      line-height: 1.25em;
+    }
+
+    @include media($desktop) {
+      font-size: em(60, $base-value-tablet);
+      line-height: 1.15em;
+    }
+  }
+}
+
+h2, .h2 {
+  font-size: em(24, $base-value-tablet);
+  line-height: 1.45em;
+  font-weight: bold;
+
+  &.alt {
+    font-weight: normal;
+  }
+
+  @include media($tablet) {
+    font-size: em(26, $base-value-tablet);
+    line-height: 1.25em;
+  }
+
+  @include media($desktop) {
+    font-size: em(30, $base-value-tablet);
+    line-height: 1.15em;
+  }
+}
+
+h3, .h3 {
+  font-family: $header-font-family;
+  font-size: 1.231em;
+  text-transform: uppercase;
+  margin: #{$base-line-height * 0.5} 0 #{$base-line-height * 0.5};
+}
+
+h4, .h4 {
+  font-family: $header-font-family;
+  font-size: 1.078em;
+  margin: #{$base-line-height * 0.5} 0 #{$base-line-height * 0.5};
+}
+
+.copy {
+  font-size: em(15, $base-value);
+}
+
+.copy-large {
+  font-size: em(18, $base-value);
+}
+
+.copy-half {
+  @extend .copy;
+  @include span-columns(6 of 12);
+}
+
+.flush-top {
+  margin-top: 0;
+}
+
+.flush-bottom {
+  margin-bottom: 0;
+}
