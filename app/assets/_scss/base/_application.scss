@@ -133,7 +133,8 @@ a:hover, a:active {
   display: block;
 }
 
-.content-primary {
+.content-primary,
+.post {
   padding: 1.5em;
   @include fill-parent();
 
@@ -143,5 +144,3 @@ a:hover, a:active {
     @include omega();
   }
 }
-
-.footer-primary {}

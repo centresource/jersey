@@ -229,9 +229,10 @@ module.exports = function (grunt) {
             // Usemin moves CSS and javascript inside of Usemin blocks
             // Copy moves asset files and directories
             'assets/img/**/*',
+            'assets/_scss/**/*',
             'assets/fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore
-            '!**/_*{,/**}'
+            // '!**/_*{,/**}'
             // Explicitly add any files your site needs for distribution here
             //'_app/_bower_components/jquery/jquery.js',
             //'favicon.ico',
@@ -344,7 +345,7 @@ module.exports = function (grunt) {
     // 'uglify',
     'imagemin',
     'svgmin',
-    'rev',
+    // 'rev',
     'usemin',
     'htmlmin'
     ]);

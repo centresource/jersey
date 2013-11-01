@@ -118,6 +118,7 @@ a:hover, a:active {
 .nav-submenu {
   @extend .nav-menu;
   border-radius: 0;
+  display: none;
 
   .nav-action-sub {
     font-size: 12px;
@@ -128,7 +129,12 @@ a:hover, a:active {
   }
 }
 
-.content-primary {
+.nav-menu.child-active .nav-submenu {
+  display: block;
+}
+
+.content-primary,
+.post {
   padding: 1.5em;
   @include fill-parent();
 
@@ -138,5 +144,3 @@ a:hover, a:active {
     @include omega();
   }
 }
-
-.footer-primary {}
