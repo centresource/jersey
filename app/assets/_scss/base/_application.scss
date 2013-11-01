@@ -118,6 +118,7 @@ a:hover, a:active {
 .nav-submenu {
   @extend .nav-menu;
   border-radius: 0;
+  display: none;
 
   .nav-action-sub {
     font-size: 12px;
@@ -126,6 +127,10 @@ a:hover, a:active {
       border: 0;
     }
   }
+}
+
+.nav-menu.child-active .nav-submenu {
+  display: block;
 }
 
 .content-primary {
