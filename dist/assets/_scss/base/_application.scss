@@ -129,8 +129,11 @@ a:hover, a:active {
   }
 }
 
-.nav-menu.child-active .nav-submenu {
-  display: block;
+.nav-action.active,
+.nav-action.child-active {
+  .nav-submenu {
+    display: block;
+  }
 }
 
 .content-primary,
