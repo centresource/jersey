@@ -6,7 +6,7 @@
     "David Calhoun <dcalhoun@centresource.com>"
   ],
   "description": "Centresource app styleguide.",
-  "main": "dist/_jersey.scss",
+  "main": "dist/assets/_scss/_jersey.scss",
   "keywords": [
     "centresource",
     "styleguide"
@@ -22,7 +22,8 @@
     "app",
     "Gemfile",
     "Gemfile.lock",
-    "jersey.gemspec"
+    "jersey.gemspec",
+    "CONTRIBUTING"
   ],
   "dependencies": {
     "normalize-scss": "~2.1.2",
