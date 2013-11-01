@@ -8,6 +8,7 @@
  * _forms.scss
  * _lists.scss
  * _tables.scss
+ * _navigation.scss
  * _library.scss     - Custom classes used throughout the app.
  * _module_name.scss - Styles for a module of functionality (e.g. – modal).
  * _page_name.scss   - Styles for page specific elements.
@@ -32,6 +33,9 @@ body {
   }
 }
 
+
+
+// Header
 .header-primary {
   background-color: $gray-darker;
   padding: 1.5em;
@@ -47,15 +51,8 @@ body {
   }
 }
 
-a, a:visited {
-  color: $gray-dark;
-  text-decoration: none;
-}
 
-a:hover, a:active {
-  color: lighten($gray-dark, 30%);
-}
-
+// Navigation
 .nav-primary {
   @include fill-parent();
 
@@ -64,78 +61,9 @@ a:hover, a:active {
   }
 }
 
-.nav-menu {
-  border-radius: 0;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
 
-  a, a:visited {
-    @extend %block-link;
-    background-color: $white;
-    border-bottom: 1px solid #e6e6e6;
-    padding: .75em 1em .75em 45px;
-    position: relative;
 
-    &:hover:not(.active) {
-      background-color: $orange;
-      color: $white;
-    }
-  }
-
-  .nav-action {
-    font-size: em(16, $base-value);
-    font-weight: bold;
-
-    &:last-child {
-      border-bottom: 0;
-    }
-  }
-
-  .active {
-    a, a:visited {
-      background-color: $orange-light;
-      border-bottom: 1px solid #e6e6e6;
-      color: $white;
-    }
-  }
-
-  $nav-icon-size: 14px;
-
-  .fa {
-    font-size: $nav-icon-size;
-    left: $nav-icon-size;
-    margin-top: -#{$nav-icon-size / 2};
-    position: absolute;
-    top: 50%;
-  }
-
-  @include media($desktop) {
-    border-radius: $base-border-radius;
-  }
-}
-
-.nav-submenu {
-  @extend .nav-menu;
-  border-radius: 0;
-  display: none;
-
-  .nav-action-sub {
-    font-size: 12px;
-
-    &:not(:last-child) a {
-      border: 0;
-    }
-  }
-}
-
-.nav-action.active,
-.nav-action.child-active {
-  .nav-submenu {
-    display: block;
-  }
-}
-
+// Content
 .content-primary,
 .post {
   padding: 1.5em;

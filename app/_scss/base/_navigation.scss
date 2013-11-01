@@ -1,0 +1,90 @@
+//**** Navigation ****
+
+// Stacked nav styles
+.nav-menu {
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+
+  @include media($desktop) {
+    border-radius: $base-border-radius;
+  }
+
+  a, a:visited {
+    @extend %block-link;
+    background-color: $white;
+    border-bottom: 1px solid #e6e6e6;
+    padding: .75em 1em .75em 45px;
+    position: relative;
+
+    &:hover:not(.active) {
+      background-color: $orange;
+      color: $white;
+    }
+  }
+
+  // Top level nav action
+  .nav-action {
+    font-size: em(16, $base-value);
+    font-weight: bold;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &.active,
+    &.child-active {
+      a, a:visited {
+        background-color: $orange;
+        border-bottom: 1px solid #e6e6e6;
+        color: $white;
+      }
+    }
+  }
+
+  // FontAwesome icons
+  $nav-icon-size: 14px;
+
+  .fa {
+    font-size: $nav-icon-size;
+    left: $nav-icon-size;
+    margin-top: -#{$nav-icon-size / 2};
+    position: absolute;
+    top: 50%;
+  }
+}
+
+// Second level nav menu
+.nav-menu .nav-submenu {
+  @extend .nav-menu;
+  border-radius: 0;
+  display: none;
+
+  // Second level nav action
+  .nav-action-sub {
+    font-size: 12px;
+
+    &:not(:last-child) a {
+      border: 0;
+    }
+
+    > a, > a:visited {
+      background-color: $orange-light;
+    }
+
+    &.active {
+      > a, > a:visited {
+        background-color: $orange;
+      }
+    }
+  }
+}
+
+// Active sub nav
+.nav-action.active,
+.nav-action.child-active {
+  .nav-submenu {
+    display: block;
+  }
+}

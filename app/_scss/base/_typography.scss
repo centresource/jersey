@@ -1,4 +1,13 @@
 /**** Typography ****/
+a, a:visited {
+  color: $gray-dark;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: lighten($gray-dark, 30%);
+}
+
 .link-big {
   font-size: em(30, $base-value);
 }
