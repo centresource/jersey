@@ -4,3 +4,4 @@
 .ruby-gemset
 .ruby-version
 Gemfile.lock
+bower_components

@@ -1,16 +1,9 @@
-/*
- * This file should only comprise of @imports.
- * Place all styles in appropriately named files.
- * See the ToC in _application.scss
- */
-
-//= require normalize
-
 // Utilities
+@import "normalize-scss/normalize";
 @import "base/mixins";
-@import "bourbon/bourbon";
+@import "bourbon/app/assets/stylesheets/bourbon";
 @import "base/variables";
-@import "neat/neat";
+@import "neat/app/assets/stylesheets/neat";
 @import "base/utilities";
 
 // Base
@@ -22,9 +15,3 @@
 @import "base/tables";
 @import "base/library";
 @import "base/application";
-
-// Modules
-// @import "modules/modal";
-
-// Pages
-// @import "pages/home";
