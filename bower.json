@@ -6,7 +6,7 @@
     "David Calhoun <dcalhoun@centresource.com>"
   ],
   "description": "Centresource app styleguide.",
-  "main": "dist/assets/_scss/_jersey.scss",
+  "main": "dist/css/jersey.scss",
   "keywords": [
     "centresource",
     "styleguide"
