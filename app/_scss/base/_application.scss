@@ -55,10 +55,8 @@ body {
 
 .branding,
 .nav-user {
-  float: left;
   height: 68px;
   padding: 20px 2%;
-  @include span-columns(6 of 12, collapse);
 
   #{$anchors} {
     color: $white;
@@ -67,34 +65,48 @@ body {
 
 .branding {
   background-color: $gray-darker;
-  border-radius: $base-border-radius 0 0 $base-border-radius;
-
-  @include media($tablet) {
-    width: calc(100% - 200px);
-  }
+  border-radius: $base-border-radius;
+  @include span-columns(12 of 12);
 }
 
-.nav-user {
-  @extend .nav-simple;
-  background: $orange;
-  border-radius: 0 $base-border-radius $base-border-radius 0;
-  color: $white;
-  text-align: center;
+// Header with user navigation
+.header-primary.with-nav-user {
+  .branding,
+  .nav-user {
+    margin-right: 0;
+    @include span-columns(6 of 12, collapse);
+  }
 
-  @include media($tablet) {
-    width: 200px;
+  .branding {
+    border-radius: $base-border-radius 0 0 $base-border-radius;
 
-    &:last-child {
-      width: 200px;
+    @include media($tablet) {
+      width: calc(100% - 200px);
     }
   }
 
-  > ul {
-    margin-top: em(5, $base-value-tablet);
-  }
+  .nav-user {
+    @extend .nav-simple;
+    background: $orange;
+    border-radius: 0 $base-border-radius $base-border-radius 0;
+    color: $white;
+    text-align: center;
 
-  a:hover, a:active {
-    text-decoration: underline;
+    @include media($tablet) {
+      width: 200px;
+
+      &:last-child {
+        width: 200px;
+      }
+    }
+
+    > ul {
+      margin-top: em(5, $base-value-tablet);
+    }
+
+    a:hover, a:active {
+      text-decoration: underline;
+    }
   }
 }
 
