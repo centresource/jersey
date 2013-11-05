@@ -18,23 +18,36 @@
     <link rel="stylesheet" href="/css/jersey.css">
     <!-- endbuild -->
 
-    <link href="http://fonts.googleapis.com/css?family=Paytone+One|Open+Sans:300|PT+Sans+Caption:400,700|Open+Sans:400italic,800|Raleway:400,200,100" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Paytone+One|Open+Sans:300,400,400italic,700,800" media="screen, projection" rel="stylesheet" type="text/css"/>
   </head>
 
-  <body class="page">
+  <body>
     <header id="header-primary" class="header-primary">
-      <h1 class="logo-cs">
-        <a href="/">Centresource</a>
+      <h1 class="branding">
+        <a href="/">
+          <span class="logo-cs">Centresource</span> Project Name
+        </a>
       </h1>
+
+      <nav class="nav-user">
+        <ul>
+          <li>
+            Hello, <a href="#">Josh</a>
+          </li>
+          <li>
+            <a href="#">Log Out</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <nav id="nav-primary" class="nav-primary">
       <ul class="nav-menu">
         <li class="nav-action"><a href="#"><i class="fa fa-tachometer fa-fw"></i> Dashboard</a></li>
-        <li class="nav-action active"><a href="#"><i class="fa fa-envelope fa-fw"></i> Messages</a>
+        <li class="nav-action child-active"><a href="#"><i class="fa fa-envelope fa-fw"></i> Messages</a>
           <ul class="nav-submenu">
             <li class="nav-action-sub"><a href="#"><i class="fa fa-inbox fa-fw"></i> Inbox</a></li>
-            <li class="nav-action-sub"><a href="#"><i class="fa fa-share fa-fw"></i> Sent</a></li>
+            <li class="nav-action-sub active"><a href="#"><i class="fa fa-share fa-fw"></i> Sent</a></li>
             <li class="nav-action-sub last"><a href="#"><i class="fa fa-trash-o fa-fw"></i> Deleted</a></li>
           </ul>
         </li>

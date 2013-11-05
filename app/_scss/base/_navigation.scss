@@ -1,5 +1,27 @@
 //**** Navigation ****
 
+// Simple horizontal navigation
+.nav-simple {
+  font-weight: 700;
+
+  > ul {
+    @extend %list-horizontal;
+    margin: 0;
+    padding: 0;
+
+    > li:after {
+      content: '|';
+      color: #C27048;
+    }
+
+    > li:last-child:after {
+      display: none;
+    }
+  }
+}
+
+
+
 // Stacked nav styles
 .nav-menu {
   border-radius: 0;
@@ -15,7 +37,7 @@
     @extend %block-link;
     background-color: $white;
     border-bottom: 1px solid #e6e6e6;
-    padding: .75em 1em .75em 45px;
+    padding: .75em 1.2em .75em 63px;
     position: relative;
 
     &:hover:not(.active) {
@@ -27,7 +49,7 @@
   // Top level nav action
   .nav-action {
     font-size: em(16, $base-value);
-    font-weight: bold;
+    font-weight: 700;
 
     &:last-child {
       border-bottom: 0;
@@ -48,7 +70,7 @@
 
   .fa {
     font-size: $nav-icon-size;
-    left: $nav-icon-size;
+    left: #{$nav-icon-size + ($nav-icon-size * 0.57)};
     margin-top: -#{$nav-icon-size / 2};
     position: absolute;
     top: 50%;
@@ -60,6 +82,7 @@
   @extend .nav-menu;
   border-radius: 0;
   display: none;
+  font-weight: 400;
 
   // Second level nav action
   .nav-action-sub {

@@ -1,25 +1,16 @@
 /**** Library ****/
-.page {
-  @include outer-container();
-}
-
 .logo-cs {
-  background: url('../img/logo-cs.png') no-repeat 0 -38px;
+  background: url('../img/logo-cs-mini.png') no-repeat 0 0;
   display: inline-block;
-  height: 26px;
+  height: 23px;
   margin: 0;
-  text-indent: -9999px;
   vertical-align: middle;
-  width: 216px;
+  width: 22px;
   @include hide-text;
 
   @include hidpi(2) {
-    background-image: url('../img/logo-cs@2x.png');
-    background-size: 216px 74px;
-  }
-
-  @include media($tablet) {
-    height: 37px;
+    background-image: url('../img/logo-cs-mini_2x.png');
+    background-size: 22px 23px;
   }
 
   a {
