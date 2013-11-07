@@ -1,5 +1,5 @@
 # Jersey
-Styleguides for internal Centresource applications.
+Jersey is a styleguide for internal Centresource applications. It's recommended that you include the compiled CSS file in your application. You can optionally include the `_jersey_variables.scss` file in your applications Sass file. This will allow you access to the Jersey color and breakpoint variables. Use Jersey as a base and expand upon it's styles from within your application's Sass files.
 
 ## Documentation
 
@@ -45,3 +45,6 @@ Include Jersey in your HTML `<head>`:
 ````html
 <link href="stylehseet" src="path/to/jersey.css"/>;
 ````
+
+## Usage
+It's recommend that you do not include `normalize.css` if you are including `jersey.css`. Jersey includes `normalize.css` itself. Loading `normalize.css` more than once will have unwanted results.
