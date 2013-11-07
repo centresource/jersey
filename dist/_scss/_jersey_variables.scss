@@ -1,5 +1,4 @@
 /**** Variables ****/
-@import "neat/app/assets/stylesheets/neat-helpers";
 
 //**** Globals ****
 $base-value: 12;
@@ -65,6 +64,14 @@ $orange-lightest:       #fea87d;
 $pink:                  #c3325f;
 $purple:                #7a43b6;
 
+
+
+//**** Borders ****
+$base-border-color: $gray-lighter;
+$base-border-radius: 4px;
+
+
+
 //**** Selectors ****
 $anchors-list: 'a',
                'a:visited',
@@ -75,8 +82,3 @@ $anchors: ();
 @each $anchor in $anchors-list {
   $anchors: append($anchors, unquote($anchor), comma);
 }
-
-
-//**** Borders ****
-$base-border-color: $gray-lighter;
-$base-border-radius: 4px;
