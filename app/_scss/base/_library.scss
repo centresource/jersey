@@ -34,7 +34,7 @@
 
 hr {
   background: $base-border-color;
-  margin: 0;
+  margin: em(15, $base-value) 0;
   border: 0;
   height: 1px;
   @include span-columns(12);
