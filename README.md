@@ -18,9 +18,20 @@ There is not a gem currently, but we plan to make Jersey available via a gem soo
 
 
 #### For non-Rails
-Install Jersey using Bower.
+Install Jersey using Bower by including it in your `bower.json` dependencies.
+````javascript
+{
+  "name": "My Project",
+  "version": "1.0.0",
+  "dependencies": {
+    "jersey": "git@github.com:centresource/jersey.git#0.1.1",
+  }
+}
+
+````
+
 ````bash
-bower install jersey --save
+bower install
 ````
 
 Include Jersey in your HTML `<head>`:
