@@ -1,0 +1,12 @@
+//**** Almanac ****
+
+.almanac {
+  .nav-primary {
+    .active,
+    .child-active {
+      .fa-minus-plus-o {
+        content: '\f147'; // Auto toggle plus/minus icons for collapisble nav items.
+      }
+    }
+  }
+}

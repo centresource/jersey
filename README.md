@@ -14,9 +14,7 @@ Styleguides for internal Centresource applications.
 The following font families are used within Centresource Jersey. You are not required to load them, but you may experience irregularities without them. They are all available via [Google Webfonts](http://www.google.com/fonts).
 
 - Paytone One (400)
-- Open Sans (300)
-- PT Sans Caption (400, 700)
-- Raleway (100, 200, 400)
+- PT Sans Caption (300, 400, 400 italic, 700, 800)
 
 ### Installation
 #### For Rails
@@ -32,9 +30,9 @@ Then run:
 bundle
 ````
 
-Include jersey your main Sass file:
-````scss
-@import 'jersey/jersey';
+Include Jersey in your main CSS file:
+````css
+//= require jersey
 ````
 
 #### For non-Rails
@@ -43,7 +41,7 @@ Install Jersey using Bower.
 bower install jersey --save
 ````
 
-Include jersey in your main Sass file:
-````scss
-@import 'jersey/jersey';
+Include Jersey in your HTML `<head>`:
+````html
+<link href="stylehseet" src="path/to/jersey.css"/>;
 ````

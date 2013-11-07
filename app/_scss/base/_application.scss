@@ -40,11 +40,11 @@ body {
 
 // Header
 .header-primary {
-  margin: 0;
+  margin-bottom: 1em;
   @include clearfix;
 
   @include media($desktop) {
-    margin: 0 0 2em;
+    margin-bottom: 2em;
   }
 
   @include media($large-desktop) {
