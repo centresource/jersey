@@ -4,10 +4,6 @@ Jersey is a styleguide for internal Centresource applications. It's recommended 
 ## Documentation
 
 ### Dependencies
-- Sass 3.2+
-- Normalize 2.1.3+
-- Bourbon 3.1.8+
-- Neat 1.4.0+
 - FontAwesome 4.0.1+
 
 ### Fonts
@@ -18,22 +14,8 @@ The following font families are used within Centresource Jersey. You are not req
 
 ### Installation
 #### For Rails
-**The gem has not yet been created. Rails installation is not fully ready.**
+There is not a gem currently, but we plan to make Jersey available via a gem soon. In the mean time, copy the `jersey.css` and `_jersey_variables.scss` files from this repository's `dist` directory.
 
-Install Jersey using bundler. In your Gemfile:
-````ruby
-gem 'jersey', '~>0.1.0'
-````
-
-Then run:
-````bash
-bundle
-````
-
-Include Jersey in your main CSS file:
-````css
-//= require jersey
-````
 
 #### For non-Rails
 Install Jersey using Bower.
@@ -47,4 +29,6 @@ Include Jersey in your HTML `<head>`:
 ````
 
 ## Usage
-It's recommend that you do not include `normalize.css` if you are including `jersey.css`. Jersey includes `normalize.css` itself. Loading `normalize.css` more than once will have unwanted results.
+Require `jersey.css` in your applications main stylesheet. You can optionally `@import _jersey_variables.scss` in your Sass files for access to Jersey's color and breakpoint variables.
+
+It is recommend that you do not include `normalize.css` if you are including `jersey.css`. Jersey includes `normalize.css` itself. Loading `normalize.css` more than once will have unwanted results.
