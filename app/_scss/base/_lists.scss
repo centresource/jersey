@@ -1,4 +1,15 @@
 /**** Lists ****/
+ul {
+  li {
+    margin: em(7, $base-value) 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: em(16, $base-value);
+  }
+}
+
 dl {
   margin-bottom: $base-line-height;
 }
@@ -88,24 +99,6 @@ dd {
   }
 }
 
-.list-primary {
-  font-size: em(18, $base-value);
-  margin: 0;
-
-  li {
-    margin: .5em 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 1em;
-  }
-}
-
 .list-column-row {
   @extend %flex-column-list;
 
@@ -177,6 +170,7 @@ dd {
 
   li {
     border-left: 1px solid $base-border-color;
+    margin: 0;
     padding: 0 0 1em 2em;
     position: relative;
 

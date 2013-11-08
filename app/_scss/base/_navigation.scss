@@ -3,11 +3,16 @@
 // Simple horizontal navigation
 .nav-simple {
   font-weight: 700;
+  font-size: em(12, $base-value);
 
   > ul {
     @extend %list-horizontal;
     margin: 0;
     padding: 0;
+
+    > li {
+      margin: 0;
+    }
 
     > li:after {
       content: '|';
@@ -24,13 +29,13 @@
 
 // Stacked nav styles
 .nav-menu {
-  border-radius: 0;
+  border-radius: $base-border-radius;
   margin: 0;
   overflow: hidden;
   padding: 0;
 
-  @include media($desktop) {
-    border-radius: $base-border-radius;
+  li {
+    margin: 0;
   }
 
   a, a:visited {

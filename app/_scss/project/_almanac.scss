@@ -9,4 +9,17 @@
       }
     }
   }
+
+  .content-primary {
+    > h1, h2, h3, h4, h5 {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    // Remove margin between paired headers
+    > h2 + h1:first-of-type {
+      margin-top: em(-28, 55);
+    }
+  }
 }

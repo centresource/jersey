@@ -22,7 +22,7 @@
  * -----------------------------------------------------------------------------*/
 body {
   background-color: $beige;
-  color: $black;
+  color: $gray-dark;
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 300;
@@ -40,15 +40,15 @@ body {
 
 // Header
 .header-primary {
-  margin-bottom: 1em;
+  margin-bottom: em(14, $base-value);
   @include clearfix;
 
   @include media($desktop) {
-    margin-bottom: 2em;
+    margin-bottom: em(26, $base-value-tablet);
   }
 
   @include media($large-desktop) {
-    margin: 2em 0;
+    margin: em(26, $base-value-tablet) 0;
     border-radius: $base-border-radius;
   }
 }
@@ -114,6 +114,7 @@ body {
 
 // Navigation
 .nav-primary {
+  margin-bottom: em(18, $base-value);
   @include fill-parent();
 
   @include media($desktop) {
@@ -126,12 +127,16 @@ body {
 // Content
 .content-primary,
 .post {
-  padding: 1.5em;
   @include fill-parent();
 
   @include media($desktop) {
-    padding: 0;
     @include span-columns(9 of 12);
     @include omega();
+  }
+}
+
+.column-header {
+  > h2:first-of-type {
+    margin-top: 0;
   }
 }

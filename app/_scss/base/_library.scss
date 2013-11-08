@@ -20,7 +20,7 @@
 
 .content-section {
   @include span-columns(12);
-  padding: 2em 0;
+  padding: em(20, $base-value) 0;
 
   h2:first-of-type {
     @extend .flush-top;
@@ -28,13 +28,14 @@
 }
 
 .thirds {
-  padding: 0 1em;
+  padding: 0 em(14, $base-value);
   @include span-columns(4 of 12);
+  @include omega(3n);
 }
 
 hr {
   background: $base-border-color;
-  margin: 0;
+  margin: em(15, $base-value) 0;
   border: 0;
   height: 1px;
   @include span-columns(12);
@@ -67,4 +68,8 @@ hr {
       width: 660px;
     }
   }
+}
+
+.caption {
+  @extend .lead;
 }
