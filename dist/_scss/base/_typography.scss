@@ -1,0 +1,123 @@
+/**** Typography ****/
+
+// Links
+a, a:visited {
+  color: $gray-dark;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: lighten($gray-dark, 30%);
+}
+
+.link-big {
+  font-size: em(30, $base-value);
+}
+
+.link-orange {
+  @include link-variant($orange);
+}
+
+.link-white {
+  @include link-variant($white, $gray-light);
+}
+
+.link-orange-big {
+  @extend .link-big;
+  @extend .link-orange;
+}
+
+
+
+// Headers
+h1, h2, h3, h4, h5, h6
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 400;
+  margin: 24px 0;
+  @include transition(color 0.4s linear);
+}
+
+h1, .h1 {
+  font-family: $header-font-family;
+  font-size: $base-value-tablet;
+  font-size: em(48, $base-value-tablet);
+  font-weight: 400;
+  line-height: em(56, 48);
+
+  @include media($tablet) {
+    font-size: em(55, $base-value-tablet);
+    line-height: em(63, 55);
+    margin: em(24, 55) 0;
+  }
+}
+
+h2, .h2 {
+  font-size: em(30, $base-value-tablet);
+  line-height: em(38, 30);
+  margin: em(24, 30) 0;
+}
+
+h3, .h3 {
+  @extend h2;
+  font-weight: 800;
+}
+
+h4, .h4 {
+  font-size: em(22, $base-value-tablet);
+  font-weight: 400;
+  line-height: em(28, 22);
+  margin: em(6, 22) 0;
+}
+
+
+
+// Paragraphs
+p {
+  line-height: 1.75;
+  margin: em(24, $base-value-tablet) 0;
+}
+
+.lead {
+  font-size: em(22, $base-value);
+  line-height: em(32, 22);
+  margin: em(18, 22) 0;
+}
+
+.cols-2 {
+  @include media($tablet) {
+    margin-top: em(14, $base-value);
+    margin-bottom: em(14, $base-value);
+    @include columns(2 em(15, $base-value));
+
+    > p:first-of-type {
+      margin-top: 0;
+    }
+
+    > p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+// Modifiers
+.branding {
+  color: $white;
+  font-family: $base-font-family;
+  font-size: em(20, $base-value);
+  font-weight: 800;
+  margin: 0;
+
+  .logo-cs {
+    margin-right: 10px;
+  }
+}
+
+.flush-top {
+  margin-top: 0;
+}
+
+.flush-bottom {
+  margin-bottom: 0;
+}

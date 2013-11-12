@@ -1,0 +1,142 @@
+/* Things to place in separate files...
+ * ---------------------------------------------------------------------------
+ * _variables.scss
+ * _mixins.scss
+ * _utilities.scss
+ * _typography.scss
+ * _buttons.scss
+ * _forms.scss
+ * _lists.scss
+ * _tables.scss
+ * _navigation.scss
+ * _library.scss     - Custom classes used throughout the app.
+ * _module_name.scss - Styles for a module of functionality (e.g. – modal).
+ * _page_name.scss   - Styles for page specific elements.
+ * ---------------------------------------------------------------------------
+ */
+
+/* TEMPLATE
+ * -----------------------------------------------------------------------------
+ * Styling for the structure of the site. If your element doesn't show up on
+ * every page, it probably shouldn't be in this file.
+ * -----------------------------------------------------------------------------*/
+body {
+  background-color: $beige;
+  color: $gray-dark;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+  padding: em(10, $base-value);
+  -webkit-font-smoothing: antialiased;
+  @include outer-container();
+
+  @include media($tablet) {
+    font-size: $base-font-size-tablet;
+  }
+}
+
+
+
+// Header
+.header-primary {
+  margin-bottom: em(14, $base-value);
+  @include clearfix;
+
+  @include media($desktop) {
+    margin-bottom: em(26, $base-value-tablet);
+  }
+
+  @include media($large-desktop) {
+    margin: em(26, $base-value-tablet) 0;
+    border-radius: $base-border-radius;
+  }
+}
+
+.branding,
+.nav-user {
+  height: 68px;
+  padding: 20px 2%;
+
+  #{$anchors} {
+    color: $white;
+  }
+}
+
+.branding {
+  background-color: $gray-darker;
+  border-radius: $base-border-radius;
+  @include span-columns(12 of 12);
+}
+
+// Header with user navigation
+.header-primary.with-nav-user {
+  .branding,
+  .nav-user {
+    margin-right: 0;
+    @include span-columns(6 of 12, collapse);
+  }
+
+  .branding {
+    border-radius: $base-border-radius 0 0 $base-border-radius;
+
+    @include media($tablet) {
+      width: calc(100% - 200px);
+    }
+  }
+
+  .nav-user {
+    @extend .nav-simple;
+    background: $orange;
+    border-radius: 0 $base-border-radius $base-border-radius 0;
+    color: $white;
+    text-align: center;
+
+    @include media($tablet) {
+      width: 200px;
+
+      &:last-child {
+        width: 200px;
+      }
+    }
+
+    > ul {
+      margin-top: em(5, $base-value-tablet);
+    }
+
+    a:hover, a:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+// Navigation
+.nav-primary {
+  margin-bottom: em(18, $base-value);
+  @include fill-parent();
+
+  @include media($desktop) {
+    @include span-columns(3 of 12);
+  }
+}
+
+
+
+// Content
+.content-primary,
+.post {
+  @include fill-parent();
+
+  @include media($desktop) {
+    @include span-columns(9 of 12);
+    @include omega();
+  }
+}
+
+.column-header {
+  > h2:first-of-type {
+    margin-top: 0;
+  }
+}

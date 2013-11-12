@@ -1,10 +1,11 @@
 {
   "name": "jersey",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "description": "Yeoman / Grunt workflow for jersey",
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
@@ -17,13 +18,14 @@
     "grunt-contrib-watch": "~0.5.2",
     "grunt-concurrent": "~0.3.0",
     "grunt-csscss": "~0.5.0",
+    "grunt-jekyll": "git://github.com/dannygarcia/grunt-jekyll.git#aa03074ee0f5b69dc9d7a0e6ced6bb8cd923add6",
     "grunt-rev": "~0.1.0",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-svgmin": "~0.2.0",
     "grunt-usemin": "~0.1.12",
-    "load-grunt-tasks": "~0.1.0",
+    "load-grunt-tasks": "~0.2.0",
     "time-grunt": "~0.1.1",
-    "grunt-notify": "~0.2.13"
+    "jshint-stylish": "~0.1.3"
   },
   "engines": {
     "node": ">=0.8.0"

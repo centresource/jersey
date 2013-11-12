@@ -1,3 +1,5 @@
+# .gitignore for Yeoman-Jekyll projects
+
 # Ignore hidden folders #
 # This takes care of .tmp, .sass-cache, and many others #
 .*/
@@ -34,7 +36,7 @@ Gemfile.lock
 *.tar
 *.zip
 
-# Ignore for Jersey #
+# Ignore for Yeoman-Jekyll projects #
 app/_bower_components
 node_modules
 .tmp

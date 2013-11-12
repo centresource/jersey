@@ -1,10 +1,13 @@
 # Jersey
-Jersey is a styleguide for internal Centresource applications. It's recommended that you include the compiled CSS file in your application. You can optionally include the `_jersey_variables.scss` file in your applications Sass file. This will allow you access to the Jersey color and breakpoint variables. Use Jersey as a base and expand upon it's styles from within your application's Sass files.
+Jersey is a styleguide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
 
 ## Documentation
 
 ### Dependencies
+- Normalize.css 2.1.3+
 - FontAwesome 4.0.1+
+- Bourbon 3.1.8+
+- Neat 1.4.0+
 
 ### Fonts
 The following font families are used within Centresource Jersey. You are not required to load them, but you may experience irregularities without them. They are all available via [Google Webfonts](http://www.google.com/fonts).
@@ -14,7 +17,22 @@ The following font families are used within Centresource Jersey. You are not req
 
 ### Installation
 #### For Rails
-There is not a gem currently, but we plan to make Jersey available via a gem soon. In the mean time, copy the `jersey.css` and `_jersey_variables.scss` files from this repository's `dist` directory.
+**For CSS***
+Copy the `dist/css` directory to your project. Copy the `dist/img` directory to your project.
+
+** For Sass**
+Copy the `dist/_scss` directory to your project. Copy the `dist/img` directory to your project.
+
+Update the Bourbon and Neat `@import` paths for the asset pipeline:
+````scss
+// Change...
+@import "bourbon/app/assets/stylesheets/bourbon";
+@import "neat/app/assets/stylesheets/neat";
+
+// To...
+@import "bourbon/bourbon";
+@import "neat/neat";
+````
 
 
 #### For non-Rails
@@ -27,7 +45,6 @@ Install Jersey using Bower by including it in your `bower.json` dependencies.
     "jersey": "git@github.com:centresource/jersey.git#0.1.1",
   }
 }
-
 ````
 
 ````bash
@@ -39,7 +56,10 @@ Include Jersey in your HTML `<head>`:
 <link href="stylehseet" src="path/to/jersey.css"/>;
 ````
 
-## Usage
-Require `jersey.css` in your applications main stylesheet. You can optionally `@import _jersey_variables.scss` in your Sass files for access to Jersey's color and breakpoint variables.
+Or include Jersey in your Sass file:
+````scss
+@import "jersey/_scss/jersey";
+````
 
-It is recommend that you do not include `normalize.css` if you are including `jersey.css`. Jersey includes `normalize.css` itself. Loading `normalize.css` more than once will have unwanted results.
+## Usage
+It is recommend that you include `normalize.css` in your project before loading the Jersey styles.
