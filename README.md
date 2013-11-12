@@ -17,11 +17,11 @@ The following font families are used within Centresource Jersey. You are not req
 
 ### Installation
 #### For Rails
-**For CSS***
-Copy the `dist/css` directory to your project. Copy the `dist/img` directory to your project.
+Copy the following to your project:
 
-** For Sass**
-Copy the `dist/_scss` directory to your project. Copy the `dist/img` directory to your project.
+- `dist/img`
+- `dist/css` (if you'd like to load the CSS)
+- `dist/_scss` (if you'd like to `@import` the Sass)
 
 Update the Bourbon and Neat `@import` paths for the asset pipeline:
 ````scss
