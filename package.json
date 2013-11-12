@@ -1,6 +1,6 @@
 {
-  "name": "jersey",
-  "version": "0.0.0",
+  "name": "Jersey",
+  "version": "0.1.2",
   "description": "Yeoman / Grunt workflow for jersey",
   "dependencies": {},
   "devDependencies": {
