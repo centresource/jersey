@@ -69,4 +69,6 @@ Or include Jersey in your Sass file:
 
 
 ## Usage
-It is recommend that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
+Jersey's files are intended to replace [Playbook](https://github.com/centresource/playbook) in your project.
+
+It is recommended that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
