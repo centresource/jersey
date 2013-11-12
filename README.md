@@ -59,7 +59,7 @@ bower install
 
 Include Jersey in your HTML `<head>`:
 ````html
-<link href="stylehseet" src="path/to/jersey.css"/>;
+<link href="stylehseet" src="path/to/jersey.css"/>
 ````
 
 Or include Jersey in your Sass file:
