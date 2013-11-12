@@ -1,10 +1,10 @@
 # Jersey
-Jersey is a styleguide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
+Jersey is a style guide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
 
 ## Documentation
 
 ### Dependencies
-- Normalize.css 2.1.3+
+- Normalize 2.1.3+
 - FontAwesome 4.0.1+
 - Bourbon 3.1.8+
 - Neat 1.4.0+
@@ -62,4 +62,4 @@ Or include Jersey in your Sass file:
 ````
 
 ## Usage
-It is recommend that you include `normalize.css` in your project before loading the Jersey styles.
+It is recommend that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
