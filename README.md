@@ -1,6 +1,7 @@
 # Jersey
 Jersey is a style guide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
 
+
 ## Documentation
 
 ### Dependencies
@@ -15,15 +16,16 @@ The following font families are used within Centresource Jersey. You are not req
 - Paytone One (400)
 - PT Sans Caption (300, 400, 400 italic, 700, 800)
 
-### Installation
-#### For Rails
+
+## Installation
+### For Rails
 Copy the following to your project:
 
 - `dist/img`
 - `dist/css` (if you'd like to load the CSS)
 - `dist/_scss` (if you'd like to `@import` the Sass)
 
-Update the Bourbon and Neat `@import` paths for the asset pipeline:
+When loading Sass, first update the Bourbon and Neat `@import` paths for the asset pipeline:
 ````scss
 // Change...
 @import "bourbon/app/assets/stylesheets/bourbon";
@@ -34,8 +36,12 @@ Update the Bourbon and Neat `@import` paths for the asset pipeline:
 @import "neat/neat";
 ````
 
+Then load Jersey:
+````scss
+@import "jersey/dist/_scss/jersey";
+````
 
-#### For non-Rails
+### For non-Rails
 Install Jersey using Bower by including it in your `bower.json` dependencies.
 ````javascript
 {
@@ -60,6 +66,7 @@ Or include Jersey in your Sass file:
 ````scss
 @import "jersey/_scss/jersey";
 ````
+
 
 ## Usage
 It is recommend that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
