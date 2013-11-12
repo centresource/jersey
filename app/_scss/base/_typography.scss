@@ -71,7 +71,7 @@ h4, .h4 {
 
 
 
-// Paragraphs
+// General
 p {
   line-height: 1.75;
   margin: em(24, $base-value-tablet) 0;
@@ -83,25 +83,44 @@ p {
   margin: em(18, 22) 0;
 }
 
-.cols-2 {
-  @include media($tablet) {
-    margin-top: em(14, $base-value);
-    margin-bottom: em(14, $base-value);
-    @include columns(2 em(15, $base-value));
+blockquote {
+  border-left: 6px solid $orange;
+  font-style: italic;
+  margin: 2em 0;
+  padding-left: 1em;
 
-    > p:first-of-type {
-      margin-top: 0;
-    }
-
-    > p:last-of-type {
-      margin-bottom: 0;
-    }
+  p {
+    color: $gray-darker;
   }
+
+  p:last-of-type {
+    margin-bottom: 0.75em;
+  }
+}
+
+pre {
+  margin: 0 0 em(24, $base-value-tablet) 0;
+}
+
+pre {
+  background: lighten($beige, 2%);
+  overflow: auto;
+  padding: em(10, $base-value-tablet);
+
+  code {
+    padding: 0;
+  }
+}
+
+code {
+  background: lighten($beige, 2%);
+  font-size: em(18, $base-value-tablet);
+  padding: em(3, 18) em(7, 18);
 }
 
 
 
-// Modifiers
+// Custom styles
 .branding {
   color: $white;
   font-family: $base-font-family;
@@ -120,4 +139,20 @@ p {
 
 .flush-bottom {
   margin-bottom: 0;
+}
+
+.cols-2 {
+  @include media($tablet) {
+    margin-top: em(14, $base-value);
+    margin-bottom: em(14, $base-value);
+    @include columns(2 em(15, $base-value));
+
+    > p:first-of-type {
+      margin-top: 0;
+    }
+
+    > p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
