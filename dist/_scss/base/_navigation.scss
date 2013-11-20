@@ -3,10 +3,10 @@
 // Simple horizontal navigation
 .nav-simple {
   font-weight: 700;
-  font-size: em(12, $base-value);
 
   > ul {
     @extend %list-horizontal;
+    font-size: em(12, $base-value);
     margin: 0;
     padding: 0;
 

@@ -41,7 +41,13 @@ body {
 // Header
 .header-primary {
   margin-bottom: em(14, $base-value);
+  position: relative;
   @include clearfix;
+
+  @include media($tablet) {
+    background: $gray-darker;
+    border-radius: $base-border-radius;
+  }
 
   @include media($desktop) {
     margin-bottom: em(26, $base-value-tablet);
@@ -55,8 +61,8 @@ body {
 
 .branding,
 .nav-user {
-  height: 68px;
-  padding: 20px 2%;
+  height: em(68, $base-value-tablet);
+  padding: em(20, $base-value-tablet);
 
   #{$anchors} {
     color: $white;
@@ -64,13 +70,18 @@ body {
 }
 
 .branding {
-  background-color: $gray-darker;
-  border-radius: $base-border-radius;
+  background: $gray-darker;
+  overflow: hidden;
   @include span-columns(12 of 12);
 }
 
+
+
 // Header with user navigation
 .header-primary.with-nav-user {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+
   .branding,
   .nav-user {
     margin-right: 0;
@@ -81,7 +92,7 @@ body {
     border-radius: $base-border-radius 0 0 $base-border-radius;
 
     @include media($tablet) {
-      width: calc(100% - 200px);
+      @include span-columns(5 of 12, collapse);
     }
   }
 
@@ -90,18 +101,26 @@ body {
     background: $orange;
     border-radius: 0 $base-border-radius $base-border-radius 0;
     color: $white;
-    text-align: center;
+    text-align: right;
 
     @include media($tablet) {
-      width: 200px;
+      float: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
 
       &:last-child {
-        width: 200px;
+        width: auto;
       }
     }
 
     > ul {
-      margin-top: em(5, $base-value-tablet);
+      margin-top: em(7, $base-value-tablet);
+
+      @include media($tablet) {
+        margin-top: em(5, $base-value-tablet);
+      }
     }
 
     a:hover, a:active {
