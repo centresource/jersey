@@ -13,7 +13,6 @@ body_class: markdown
 ### Header Three
 #### Header Four
 
-
 * * *
 
 ### Paragraphs
