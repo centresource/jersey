@@ -1,20 +1,32 @@
 ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  margin-bottom: $base-line-height / 2;
+  padding-left: $base-line-height;
 
-  &%default-ul {
-    list-style-type: disc;
-    margin-bottom: $base-line-height / 2;
-    padding-left: $base-line-height;
+  &%list-horizontal {
+    margin: 0;
+
+    > li {
+      display: inline-block;
+    }
   }
 
-  &%default-ol {
-    list-style-type: decimal;
-    margin-bottom: $base-line-height / 2;
-    padding-left: $base-line-height;
+  &%list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 }
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+
+
 
 dl {
   line-height: $base-line-height;
@@ -30,41 +42,9 @@ dl {
   }
 }
 
-%list-horizontal {
-  margin: 0;
-
-  > li {
-    display: inline-block;
-  }
-}
-
-%flex-column-list {
-  @include outer-container;
-
-  @include media($medium) {
-    /* if only one column exists, make it full width */
-    %flex-col {
-      @include span-columns(12 of 12, block-collapse);
-    }
-
-    /* if two columns exist, make them both half width */
-    %flex-col:first-child:nth-last-child(2),
-    %flex-col:first-child:nth-last-child(2) ~ %flex-col {
-      @include span-columns(6 of 12, block-collapse);
-    }
-
-    /* three columns... */
-    %flex-col:first-child:nth-last-child(3),
-    %flex-col:first-child:nth-last-child(3) ~ %flex-col {
-      @include span-columns(4 of 12, block-collapse);
-    }
-
-    /* four columns... */
-    %flex-col:first-child:nth-last-child(4),
-    %flex-col:first-child:nth-last-child(4) ~ %flex-col {
-      @include span-columns(3 of 12, block-collapse);
-    }
-  }
+.post {
+  ul { @extend %default-ul; }
+  ol { @extend %default-ol; }
 }
 
 .list-column-row {
@@ -134,6 +114,8 @@ dl {
 }
 
 .list-tree {
+  @extend %list-unstyled;
+
   li {
     border-left: 1px solid $base-border-color;
     margin: 0;

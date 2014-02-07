@@ -1,0 +1,28 @@
+%flex-column-list {
+  @include outer-container;
+
+  @include media($medium) {
+    /* if only one column exists, make it full width */
+    %flex-col {
+      @include span-columns(12 of 12, block-collapse);
+    }
+
+    /* if two columns exist, make them both half width */
+    %flex-col:first-child:nth-last-child(2),
+    %flex-col:first-child:nth-last-child(2) ~ %flex-col {
+      @include span-columns(6 of 12, block-collapse);
+    }
+
+    /* three columns... */
+    %flex-col:first-child:nth-last-child(3),
+    %flex-col:first-child:nth-last-child(3) ~ %flex-col {
+      @include span-columns(4 of 12, block-collapse);
+    }
+
+    /* four columns... */
+    %flex-col:first-child:nth-last-child(4),
+    %flex-col:first-child:nth-last-child(4) ~ %flex-col {
+      @include span-columns(3 of 12, block-collapse);
+    }
+  }
+}

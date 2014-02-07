@@ -40,6 +40,7 @@
     @extend %block-link;
     background-color: $white;
     border-bottom: 1px solid #e6e6e6;
+    color: $gray-dark;
     padding: .75em 1.2em .75em 63px;
     position: relative;
     @include transition(none);

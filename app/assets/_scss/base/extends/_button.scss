@@ -1,4 +1,11 @@
 %button {
-  @include button(simple, $base-accent-color);
+  background: transparent;
+  border: none;
   font-size: $base-font-size;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
 }
+
