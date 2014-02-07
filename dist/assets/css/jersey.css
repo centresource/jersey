@@ -873,15 +873,15 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #ff8549;
+  color: #da6b11;
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear; }
   a:hover {
-    color: #fb5300; }
+    color: #93480b; }
   a:active, a:focus {
-    color: #fb5300;
+    color: #93480b;
     outline: none; }
 
 hr {
@@ -910,7 +910,7 @@ del {
   color: #595959; }
 
 blockquote {
-  border-left: 6px solid #ff8549;
+  border-left: 6px solid #da6b11;
   color: #595959;
   font-style: italic;
   margin: 1.5em 0;
@@ -946,13 +946,13 @@ code {
   font-size: 1.875em; }
 
 .link-orange, .link-orange-big, .list-tree a {
-  color: #ff8549;
+  color: #da6b11;
   text-decoration: none; }
   .link-orange:visited, .link-orange-big:visited, .list-tree a:visited {
-    color: #ff8549;
+    color: #da6b11;
     text-decoration: none; }
   .link-orange:hover, .link-orange-big:hover, .list-tree a:hover, .link-orange:active, .link-orange-big:active, .list-tree a:active {
-    color: #ff6316; }
+    color: #ab540d; }
 
 .link-white {
   color: white;
@@ -1018,17 +1018,17 @@ code {
     margin-top: 5px; }
 
 .btn-primary {
-  background-color: #ff8549;
+  background-color: #da6b11;
   border-color: transparent;
   color: white; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:visited, .btn-primary:active, .btn-primary.active {
-    background-color: #ff8549;
+    background-color: #da6b11;
     border-color: transparent;
     color: white; }
   .btn-primary:active, .btn-primary.active {
     background-image: none; }
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:visited, .btn-primary.disabled:active, .btn-primary.active.disabled, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:visited, .btn-primary[disabled]:active, .btn-primary[disabled].active {
-    background-color: #ff8549;
+    background-color: #da6b11;
     border-color: transparent; }
   .btn-primary:hover {
     background-color: #fe925d; }
@@ -1077,8 +1077,8 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
     border-color: gray; }
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus {
-    border-color: #ff8549;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(255, 116, 48, 0.7);
+    border-color: #da6b11;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(194, 95, 15, 0.7);
     outline: none; }
 
 input[type="search"] {
@@ -1281,7 +1281,7 @@ dl {
     -moz-transition: none;
     transition: none; }
     .nav-menu a:hover:not(.active), .nav-menu a:visited:hover:not(.active) {
-      background-color: #ff8549;
+      background-color: #da6b11;
       color: white; }
   .nav-menu .nav-action {
     font-size: 1em;
@@ -1289,7 +1289,7 @@ dl {
     .nav-menu .nav-action:last-child {
       border-bottom: 0; }
     .nav-menu .nav-action.active a, .nav-menu .nav-action.active a:visited, .nav-menu .nav-action.child-active a, .nav-menu .nav-action.child-active a:visited {
-      background-color: #ff8549;
+      background-color: #da6b11;
       border-bottom: 1px solid #e6e6e6;
       color: white; }
   .nav-menu .fa {
@@ -1310,7 +1310,7 @@ dl {
     .nav-menu .nav-submenu .nav-action-sub > a, .nav-menu .nav-submenu .nav-action-sub > a:visited {
       background-color: #fe925d; }
     .nav-menu .nav-submenu .nav-action-sub.active > a, .nav-menu .nav-submenu .nav-action-sub.active > a:visited {
-      background-color: #ff8549; }
+      background-color: #da6b11; }
 
 .nav-action.active .nav-submenu,
 .nav-action.child-active .nav-submenu {
@@ -1467,7 +1467,7 @@ hr {
         .header-primary.with-nav-user .branding:last-child {
           width: 40.29137%; } }
   .header-primary.with-nav-user .nav-user {
-    background: #ff8549;
+    background: #da6b11;
     border-radius: 0 0 0.25em 0.25em;
     color: white;
     display: block; }
