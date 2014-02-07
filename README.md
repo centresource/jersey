@@ -1,7 +1,7 @@
 # Jersey
 Jersey is a style guide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
 
-It is recommended that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
+You should include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
 
 
 ## Documentation
