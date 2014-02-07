@@ -305,15 +305,23 @@ module.exports = function (grunt) {
         options: {
           patterns: [
             {
-              match: /("?)\/?assets\//g,
+              match: /("|'?)\/?assets\//g,
               replacement: '$1http://centresource.github.io/jersey/assets/'
+            },
+            {
+              match: /(<a[^>]*href="?)(\/)/g,
+              replacement: '$1http://centresource.github.io/jersey/'
+            },
+            {
+              match: /(<form[^>]*action="?)(\/)/g,
+              replacement: '$1http://centresource.github.io/jersey/'
             }
           ]
         },
         files: [
           {
             expand: true,
-            src: ['dist/**/*.html']
+            src: ['dist/**/*.html', 'dist/assets/js/*.js']
           }
         ]
       }
