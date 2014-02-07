@@ -403,12 +403,10 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
-    'cssmin',
     'uglify',
     'imagemin',
     'svgmin',
     'usemin',
-    'htmlmin'
   ]);
 
   grunt.registerTask('deploy', [
