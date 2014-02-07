@@ -3,15 +3,19 @@
 
 # TEAM
 
-    David Calhoun -- Site Maker --  http://twitter.com/david_calhoun
+  <name> -- <role> --  <twitter>
 
 # THANKS
 
-    <name>
+  <name>
 
 # TECHNOLOGY COLOPHON
 
-    Jekyll static site generator
-    Sass 
-    HTML5 ★ Boilerplate 
+  Jekyll static site generator
+  Yeoman
+  Grunt
+  Bower
+  Sass
+  Coffeescript
+  HTML5 ★ Boilerplate
 

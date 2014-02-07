@@ -6,18 +6,15 @@
 # Use _config.build.yml to override these settings on `grunt build`.
 
 name: Jersey
-description: Style guide for internal Centresource applications.
+description: Jersey.
 
 author:
   name: David Calhoun
   email: dcalhoun@centresource.com
-  github: dcalhoun
-  twitter: david_calhoun
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and asset directories.
-exclude: ['img', 'css', 'js', 'fonts',
-          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+exclude: ['assets', '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
 # Force inclusion of directories and/or files in the conversion.
 # .htaccess is a good example since dotfiles are excluded by default.
@@ -35,7 +32,7 @@ future: true
 
 # Compile posts in the _drafts directory.
 # _config.build.yml sets this to false on `grunt build`
-show_drafts: true
+show_drafts: false
 
 # Split posts over multiple subdirectories called “page2”, “page3”, … “pageN”
 paginate: 10
