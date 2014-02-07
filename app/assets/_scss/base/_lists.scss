@@ -42,11 +42,6 @@ dl {
   }
 }
 
-.post {
-  ul { @extend %default-ul; }
-  ol { @extend %default-ol; }
-}
-
 .list-column-row {
   @extend %flex-column-list;
 
