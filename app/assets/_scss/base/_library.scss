@@ -1,0 +1,84 @@
+.logo-cs {
+  background: url('../img/logo-cs-mini.png') no-repeat 0 0;
+  display: inline-block;
+  height: 23px;
+  margin: 0;
+  vertical-align: middle;
+  width: 22px;
+  @include hide-text;
+
+  @include hidpi(2) {
+    background-image: url('../img/logo-cs-mini_2x.png');
+    background-size: 22px 23px;
+  }
+
+  a {
+    @extend %block-link;
+  }
+}
+
+.content-section {
+  @include span-columns(12);
+  padding: em(20) 0;
+
+  h2:first-of-type {
+    @extend .flush-top;
+  }
+}
+
+.thirds {
+  padding: 0 em(14);
+  @include span-columns(4 of 12);
+  @include omega(3n);
+}
+
+hr {
+  background: $base-border-color;
+  margin: em(15) 0;
+  border: 0;
+  height: 1px;
+  @include span-columns(12);
+}
+
+.screenshot-container {
+  @include fill-parent();
+
+  .screenshot {
+    border: 1px solid $base-border-color;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+  }
+
+  @include media($large) {
+    background: url('../img/imac-blank.png') no-repeat top left;
+    border: 0;
+    height: 532px;
+    margin: 0 auto;
+    width: 716px;
+    position: relative;
+
+    // target height: 660w, 370h
+    .screenshot {
+      height: 370px;
+      left: 28px;
+      position: absolute;
+      top: 28px;
+      width: 660px;
+    }
+  }
+}
+
+.caption {
+  @extend .lead;
+}
+
+.redacted {
+  background-color: $gray-light;
+  color: $gray-light;
+
+  &:hover, &:active {
+    background-color: $gray-lighter;
+    color: $black;
+  }
+}

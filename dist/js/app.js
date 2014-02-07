@@ -1,1 +1,0 @@
-!function(a){a(document).ready(function(){a("#nav-primary").on("click",".nav-action > a",function(b){b.preventDefault();var c=a(b.target).parent("li"),d=c.hasClass("active")||c.hasClass("child-active");d?c.removeClass("active child-active"):c.addClass("active")})})}(jQuery);

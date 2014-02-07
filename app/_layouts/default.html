@@ -10,11 +10,10 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css"/>
-    <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css"/>
+    {% include styles.html %}
 
-    <!-- build:css({app,.tmp}) /css/jersey.css -->
-    <link rel="stylesheet" href="/css/jersey.css">
+    <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
   </head>
@@ -30,6 +29,5 @@
     {{ content }}
 
     {% include scripts.html %}
-
   </body>
 </html>

@@ -1,0 +1,150 @@
+ul, ol {
+  margin-bottom: $base-line-height / 2;
+  padding-left: $base-line-height;
+
+  &%list-horizontal {
+    margin: 0;
+
+    > li {
+      display: inline-block;
+    }
+  }
+
+  &%list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+
+
+
+dl {
+  line-height: $base-line-height;
+  margin-bottom: $base-line-height / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $base-line-height / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.post {
+  ul { @extend %default-ul; }
+  ol { @extend %default-ol; }
+}
+
+.list-column-row {
+  @extend %flex-column-list;
+
+  .list-col {
+    @extend %flex-col;
+    border-bottom: 1px solid $base-border-color;
+    padding: 1em 0;
+
+    &:last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+
+    @include media($medium) {
+      border-bottom: 0;
+      border-right: 1px solid $base-border-color;
+      padding: 0 2em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.wireframe-column-row {
+  @extend %flex-column-list;
+
+  .wireframe-col {
+    @extend %flex-col;
+    border-bottom: 1px solid $base-border-color;
+    padding: 1em 0;
+    text-align: center;
+
+    &:last-child {
+      padding-bottom: 0;
+      border: 0;
+    }
+
+    @include media($medium) {
+      border-bottom: 0;
+      padding: 0 2em;
+      text-align: left;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.list-tree {
+  @extend %list-unstyled;
+
+  li {
+    border-left: 1px solid $base-border-color;
+    margin: 0;
+    padding: 0 0 1em 2em;
+    position: relative;
+
+    &:before {
+      background: $base-border-color;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 26px;
+      width: 19px;
+    }
+
+    &:last-child:after {
+      background: $beige;
+      content: '';
+      height: calc(100% - 19px);
+      left: -1px;
+      position: absolute;
+      top: 27px;
+      width: 1px;
+    }
+  }
+
+  a {
+    @extend .link-orange-big;
+  }
+}
+

@@ -1,6 +1,8 @@
 # Jersey
 Jersey is a style guide for internal Centresource applications. Read the installation section for more inforation for getting up and running.
 
+You should include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
+
 
 ## Documentation
 
@@ -68,7 +70,26 @@ Or include Jersey in your Sass file:
 ````
 
 
-## Usage
-Jersey's files are intended to replace [Playbook](https://github.com/centresource/playbook) in your project.
 
-It is recommended that you include [Normalize](http://necolas.github.io/normalize.css/) in your project before loading the Jersey styles. You should also include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if you plan on using icons in your navigation.
+## Contributing
+Please read the [contributing guidlines](https://github.com/centresource/jersey/blob/master/CONTRIBUTING.md). This project utilizes Playbook, reference Playbook's [setup guide](https://github.com/centresource/generator-playbook#get-started).
+
+1. Clone this repository
+2. `npm install`
+3. `bower install`
+4. `bundle install`
+
+### Grunt Tasks
+- Check, test & build for production: `grunt`
+- Serve the site locally: `grunt serve`
+- Deploy to production: `grunt deploy`
+- Check source: `grunt check`
+- Run tests: `grunt test`
+- Build for production: `grunt build`
+
+### Bootstrap Components
+### CSS
+- None
+
+### JavaScripts
+- None

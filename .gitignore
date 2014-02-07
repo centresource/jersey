@@ -21,10 +21,8 @@ Thumbs.db
 *.swp
 ._*
 *~
-.rvmrc
-.ruby-gemset
 .ruby-version
-Gemfile.lock
+.ruby-gemset
 
 # Ignore packages #
 *.7z
