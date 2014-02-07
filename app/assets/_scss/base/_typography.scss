@@ -12,16 +12,21 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
   line-height: 1.25em;
-  margin: 0;
+  margin: 0 0 0.67em 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+  font-size: $base-font-size * 3; // 16 * 3 = 48px
+
+  @include media($medium) {
+    font-size: $base-font-size * 3.375; // 16 * 3.375 = 54px
+  }
 }
 
 h2 {
-  font-size: $base-font-size * 2; // 16 * 2 = 32px
+  font-size: $base-font-size * 1.875; // 16 * 1.875 = 30px
+  font-weight: 300;
 }
 
 h3 {
@@ -110,6 +115,7 @@ blockquote {
 
 cite {
   color: lighten($base-font-color, 25);
+  font-size: em(14);
   font-style: italic;
 
   &:before {

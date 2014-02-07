@@ -1,13 +1,3 @@
-button {
-  background: transparent;
-  border: none;
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .btn {
   border: 1px solid $gray;
   border-radius: 3px;
@@ -52,6 +42,6 @@ button {
   @include button-variant($white, $orange, transparent);
 
   &:hover {
-    @include button-variant($white, $orange-light, transparent);
+    background-color: $orange-light;
   }
 }

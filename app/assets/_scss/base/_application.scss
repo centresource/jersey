@@ -6,140 +6,141 @@
 
 /* Things to place in separate files...
  * ---------------------------------------------------------------------------
- * /extends/         => Sass extends declarations
- * /mixins/          => Sass mixins declarations
+ * /extends/            => Sass extends declarations
+ * /mixins/             => Sass mixins declarations
  * _buttons.scss
- * _fonts.scss       => Font imports
+ * _fonts.scss          => Font imports
  * _forms.scss
  * _lists.scss
- * _library.scss     => Custom classes used throughout the app.
+ * _library.scss        => Custom classes used throughout the app.
  * _tables.scss
  * _typography.scss
  * _utilities.scss
  * _variables.scss
- * _module_name.scss => Styles for a module of functionality (e.g. – modal).
- * _page_name.scss   => Styles for page specific elements.
+ * _component_name.scss => Styles for a component of functionality (e.g. – modal).
+ * _page_name.scss      => Styles for page specific elements.
  * ---------------------------------------------------------------------------
  */
 
- // Header
- .header-primary {
-   margin-bottom: em(14);
-   position: relative;
-   @include clearfix;
+// Header
+.header-primary {
+  margin-bottom: em(14);
+  position: relative;
+  text-align: center;
+  @include clearfix;
 
-   @include media($medium) {
-     background: $gray-darker;
-     border-radius: $base-border-radius;
-   }
+  @include media($medium) {
+    background: $gray-darker;
+    border-radius: $base-border-radius;
+    text-align: left;
+  }
 
-   @include media($large) {
-     margin-bottom: em(26);
-   }
+  @include media($large) {
+    margin-bottom: em(26);
+  }
 
-   @include media($x-large) {
-     margin: em(26) 0;
-     border-radius: $base-border-radius;
-   }
- }
+  @include media($x-large) {
+    margin: em(26) 0;
+    border-radius: $base-border-radius;
+  }
+}
 
- .branding,
- .nav-user {
-   height: em(68);
-   padding: em(20);
+.branding,
+.nav-user {
+  height: em(68);
+  padding: em(20);
 
-   a, a:visited {
-     color: $white;
-   }
- }
+  a, a:visited {
+    color: $white;
+  }
+}
 
- .branding {
-   background: $gray-darker;
-   overflow: hidden;
-   @include span-columns(12 of 12);
- }
-
-
-
- // Header with user navigation
- .header-primary.with-nav-user {
-   border-top-right-radius: 6px;
-   border-bottom-right-radius: 6px;
-
-   .branding,
-   .nav-user {
-     margin-right: 0;
-     @include span-columns(6 of 12, block-collapse);
-   }
-
-   .branding {
-     border-radius: $base-border-radius 0 0 $base-border-radius;
-
-     @include media($medium) {
-       @include span-columns(5 of 12, block-collapse);
-     }
-   }
-
-   .nav-user {
-     @extend .nav-simple;
-     background: $orange;
-     border-radius: 0 $base-border-radius $base-border-radius 0;
-     color: $white;
-     text-align: right;
-
-     @include media($medium) {
-       float: none;
-       position: absolute;
-       right: 0;
-       top: 0;
-       width: auto;
-
-       &:last-child {
-         width: auto;
-       }
-     }
-
-     > ul {
-       margin-top: em(7);
-
-       @include media($medium) {
-         margin-top: em(5);
-       }
-     }
-
-     a:hover, a:active {
-       text-decoration: underline;
-     }
-   }
- }
+.branding {
+  background: $gray-darker;
+}
 
 
 
- // Navigation
- .nav-primary {
-   margin-bottom: em(18);
-   @include fill-parent();
+// Header with user navigation
+.header-primary.with-nav-user {
+  border-radius: em(6);
 
-   @include media($large) {
-     @include span-columns(3 of 12);
-   }
- }
+  .branding,
+  .nav-user {
+    margin-right: 0;
+  }
+
+  .branding {
+    border-radius: $base-border-radius $base-border-radius 0 0;
+
+    @include media($medium) {
+      border-radius: $base-border-radius 0 0 $base-border-radius;
+      @include span-columns(5 of 12, block-collapse);
+    }
+  }
+
+  .nav-user {
+    @extend .nav-simple;
+    background: $orange;
+    border-radius: 0 0 $base-border-radius $base-border-radius;
+    color: $white;
+    display: block;
+
+    @include media($medium) {
+      border-radius: 0 $base-border-radius $base-border-radius 0;
+      float: none;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      width: auto;
+
+      &:last-child {
+        width: auto;
+      }
+    }
+
+    > ul {
+      margin-top: em(7);
+
+      @include media($medium) {
+        margin-top: em(5);
+      }
+    }
+
+    a:hover, a:active {
+      text-decoration: underline;
+    }
+  }
+}
 
 
 
- // Content
- .content-primary,
- .post {
-   @include fill-parent();
+// Navigation
+.nav-primary {
+  margin-bottom: em(18);
+  @include fill-parent();
 
-   @include media($large) {
-     @include span-columns(9 of 12);
-     @include omega();
-   }
- }
+  @include media($large) {
+    @include span-columns(3 of 12);
+  }
+}
 
- .column-header {
-   > h2:first-of-type {
-     margin-top: 0;
-   }
- }
+
+
+// Content
+.content-primary,
+.post {
+  @include fill-parent();
+
+  @include media($large) {
+    @include span-columns(9 of 12);
+    @include omega();
+  }
+}
+
+.column-header {
+  > h2:first-of-type {
+    margin-top: 0;
+  }
+}
