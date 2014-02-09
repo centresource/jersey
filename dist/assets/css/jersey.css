@@ -842,12 +842,13 @@ body {
     clear: both; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Paytone One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.25em;
   margin: 0 0 0.67em 0;
   text-rendering: optimizeLegibility; }
 
 h1 {
+  font-family: "Paytone One", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3em; }
   @media screen and (min-width: 43.75em) {
     h1 {
@@ -1031,7 +1032,7 @@ code {
     background-color: #da6b11;
     border-color: transparent; }
   .btn-primary:hover {
-    background-color: #fe925d; }
+    background-color: #ed7413; }
 
 fieldset {
   background: #b3b3b3;
@@ -1308,7 +1309,7 @@ dl {
     .nav-menu .nav-submenu .nav-action-sub:not(:last-child) a {
       border: 0; }
     .nav-menu .nav-submenu .nav-action-sub > a, .nav-menu .nav-submenu .nav-action-sub > a:visited {
-      background-color: #fe925d; }
+      background-color: #ed7413; }
     .nav-menu .nav-submenu .nav-action-sub.active > a, .nav-menu .nav-submenu .nav-action-sub.active > a:visited {
       background-color: #da6b11; }
 
