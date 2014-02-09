@@ -16,7 +16,7 @@ You should include [FontAwesome](http://fortawesome.github.io/Font-Awesome/) if 
 The following font families are used within Centresource Jersey. You are not required to load them, but you may experience irregularities without them. They are all available via [Google Webfonts](http://www.google.com/fonts).
 
 - Paytone One (400)
-- PT Sans Caption (300, 400, 400 italic, 700, 800)
+- Open Sans (300, 400, 400 italic, 700, 800)
 
 
 ## Installation

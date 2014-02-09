@@ -5,7 +5,7 @@ $sans-serif-alt: 'Paytone One', $helvetica;
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
-$header-font-family: $sans-serif-alt;
+$header-font-family: $base-font-family;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
@@ -34,8 +34,8 @@ $red-light:             #FBE3E4;
 $yellow:                #fe9800;
 $yellow-light:          #FFF6BF;
 $orange:                #da6b11;
-$orange-light:          #fe925d;
-$orange-lightest:       #fea87d;
+$orange-light:          lighten($orange, 4);
+$orange-lightest:       lighten($orange, 10);
 $pink:                  #c3325f;
 $purple:                #7a43b6;
 
