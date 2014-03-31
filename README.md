@@ -2,6 +2,10 @@
 Jersey is a style guide for internal Centresource applications. Read the installation section for more information for getting up and running.
 
 ## Documentation
+
+### Dependencies
+- Normalize.css
+
 ### Fonts
 The following font families are used within Centresource Jersey. You are not required to load them, but you may experience irregularities without them.
 
