@@ -1043,7 +1043,8 @@ hr {
     color: white; }
 
 .branding {
-  background: #222222; }
+  background: #222222;
+  border-radius: 0.375em; }
 
 .header-primary.with-nav-user {
   border-radius: 0.375em; }
