@@ -1,0 +1,47 @@
+.btn {
+  border: 1px solid $gray;
+  border-radius: 3px;
+  color: $black;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: em(14);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: em(7, 14) em(14, 14);
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.disabled {
+    @extend .disabled;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+}
+
+.btn-block {
+  display: block;
+  text-align: center;
+  width: 100%;
+
+  & + .btn-block {
+    margin-top: 5px;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  @include button-variant($white, $orange, transparent);
+
+  &:hover {
+    background-color: $orange-light;
+  }
+}
