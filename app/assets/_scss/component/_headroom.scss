@@ -1,0 +1,16 @@
+.header-fixed {
+  @include position(fixed, 0 0 null 0);
+  z-index: 10;
+}
+
+.headroom {
+  @include transition(all 0.2s ease-in-out);
+
+  &.headroom--unpinned {
+    @include transform(translate3d(0, -100%, 0));
+  }
+
+  &.headroom--pinned {
+    @include transform(translate3d(0, 0, 0));
+  }
+}

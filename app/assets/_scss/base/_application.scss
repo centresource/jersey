@@ -22,126 +22,43 @@
  * ---------------------------------------------------------------------------
  */
 
-// Header
+body.with-fixed-header {
+  padding-top: em(56);
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: em(700);
+}
+
+// Simple Header
 .header-primary {
-  margin-bottom: em(14);
-  position: relative;
-  text-align: center;
-  @include clearfix;
+  background: $orange;
+  color: $white;
+  left: 0;
+  margin: 0 0 1em;
+  padding: 0.5em;
 
-  @include media($medium) {
-    background: $gray-darker;
-    border-radius: $base-border-radius;
-    text-align: left;
-  }
-
-  @include media($large) {
-    margin-bottom: em(26);
-  }
-
-  @include media($x-large) {
-    margin: em(26) 0;
-    border-radius: $base-border-radius;
+  .brand {
+    margin: 0 auto;
   }
 }
 
-.branding,
-.nav-user {
-  height: em(68);
-  padding: em(20);
+.nav-primary {}
 
-  a, a:visited {
-    color: $white;
-  }
+.content-primary {
+  padding: 1em;
 }
 
-.branding {
-  background: $gray-darker;
-  border-radius: em(6);
-}
-
-
-
-// Header with user navigation
-.header-primary.with-nav-user {
-  border-radius: em(6);
-
-  .branding,
-  .nav-user {
-    margin-right: 0;
-  }
-
-  .branding {
-    border-radius: $base-border-radius $base-border-radius 0 0;
-
-    @include media($medium) {
-      border-radius: $base-border-radius 0 0 $base-border-radius;
-      @include span-columns(5 of 12, block-collapse);
-    }
-  }
-
-  .nav-user {
-    @extend .nav-simple;
-    background: $orange;
-    border-radius: 0 0 $base-border-radius $base-border-radius;
-    color: $white;
-    display: block;
-
-    @include media($medium) {
-      border-radius: 0 $base-border-radius $base-border-radius 0;
-      float: none;
-      position: absolute;
-      right: 0;
-      text-align: right;
-      top: 0;
-      width: auto;
-
-      &:last-child {
-        width: auto;
-      }
-    }
-
-    > ul {
-      margin-top: em(7);
-
-      @include media($medium) {
-        margin-top: em(5);
-      }
-    }
-
-    a:hover, a:active {
-      text-decoration: underline;
-    }
-  }
-}
-
-
-
-// Navigation
-.nav-primary {
-  margin-bottom: em(18);
-  @include fill-parent();
-
-  @include media($large) {
-    @include span-columns(3 of 12);
-  }
-}
-
-
-
-// Content
-.content-primary,
 .post {
-  @include fill-parent();
+  @extend .wrap;
 
-  @include media($large) {
-    @include span-columns(9 of 12);
-    @include omega();
+  img {
+    margin-bottom: ($base-line-height * 0.9);
   }
 }
 
-.column-header {
-  > h2:first-of-type {
-    margin-top: 0;
-  }
+.up-next {
+  background: darken($white, 5%);
+  padding: 6em 1em;
 }

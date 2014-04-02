@@ -1,11 +1,7 @@
 %button {
-  background: transparent;
-  border: none;
+  @include button(simple, $base-accent-color);
+  -webkit-font-smoothing: antialiased;
   font-size: $base-font-size;
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
+  font-weight: bold;
+  line-height: 1em;
 }
-

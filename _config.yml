@@ -5,8 +5,8 @@
 
 # Use _config.build.yml to override these settings on `grunt build`.
 
-name: Jersey
-description: Jersey.
+name: jersey
+description: jersey.
 
 author:
   name: David Calhoun

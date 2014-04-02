@@ -1,19 +1,21 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: 'Open Sans', $helvetica;
-$serif: $georgia;
+$sans-serif: $helvetica;
+$serif: 'freight-text-pro', $georgia;
 
-$base-font-family: $sans-serif;
+$base-font-family: $serif;
 $header-font-family: $base-font-family;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
-$base-font-size: 1em;
-$base-line-height: $base-font-size * 1.5;
-$base-border-radius: em(4);
+$em-base: 22;
+$base-font-size: 22px;
+$base-line-height: em(33);
+$base-border-radius: em(3);
 
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
+
 // Grayscale
 $black:                 #111;
 $gray-darker:           #222;
@@ -23,7 +25,7 @@ $gray-light:            #999;
 $gray-lighter:          #d6d6d6;
 $white:                 #fff;
 
-//**** Colors ****
+// Colors
 $blue:                  #477DCA;
 $beige:                 #ececec;
 $green:                 #46a546;
@@ -32,11 +34,19 @@ $red:                   #9d261d;
 $red-light:             #FBE3E4;
 $yellow:                #fe9800;
 $yellow-light:          #FFF6BF;
-$orange:                #ff8549;
-$orange-light:          lighten($orange, 4);
-$orange-lightest:       lighten($orange, 10);
+$orange:                #da6b11;
+$orange-light:          #fe925d;
+$orange-lightest:       #fea87d;
 $pink:                  #c3325f;
 $purple:                #7a43b6;
+
+
+// Brand
+$success:               $green;
+$info:                  $blue;
+$warning:               $yellow;
+$danger:                $red;
+
 
 
 // Body Color

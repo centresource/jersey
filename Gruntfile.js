@@ -205,7 +205,7 @@ module.exports = function (grunt) {
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true
+          removeRedundantAttributes: false
         },
         files: [{
           expand: true,
@@ -263,10 +263,10 @@ module.exports = function (grunt) {
             'assets/img/**/*',
             'assets/fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore
-            '!**/_*{,/**}'
+            '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here
             //'_bower_components/jquery/jquery.js',
-            // 'favicon.ico',
+            'favicon.ico',
             // 'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
@@ -286,44 +286,6 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/assets/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }
-      }
-    },
-    buildcontrol: {
-      dist: {
-        options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          remote: 'git@github.com:centresource/jersey.git',
-          branch: 'gh-pages'
-        }
-      }
-    },
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            {
-              match: /("|'?)\/?assets\//g,
-              replacement: '$1http://centresource.github.io/jersey/assets/'
-            },
-            {
-              match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://centresource.github.io/jersey/'
-            },
-            {
-              match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://centresource.github.io/jersey/'
-            }
-          ]
-        },
-        files: [
-          {
-            expand: true,
-            src: ['dist/**/*.html', 'dist/assets/js/*.js']
-          }
-        ]
       }
     },
     jshint: {
@@ -411,16 +373,13 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
+    'cssmin',
     'uglify',
     'imagemin',
     'svgmin',
+    'rev',
     'usemin',
-  ]);
-
-  grunt.registerTask('deploy', [
-    'default',
-    'replace',
-    'buildcontrol'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
