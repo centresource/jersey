@@ -5,8 +5,8 @@
 
 # Use _config.build.yml to override these settings on `grunt build`.
 
-name: jersey
-description: jersey.
+name: Jersey
+description: Centresource documentation styles.
 
 author:
   name: David Calhoun

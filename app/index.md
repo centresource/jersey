@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Jersey
+next_title: 'Validating Product Ideas'
+next_url: '/'
+next_length: '5'
 ---
 
 # Header One

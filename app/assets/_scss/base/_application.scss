@@ -88,16 +88,30 @@ body.with-fixed-header {
   @include transition(all $transition-duration ease-in-out);
   background: transparentize($white, 0.06);
   font-family: $sans-serif;
+  height: 100%;
+  overflow: hidden;
   z-index: 200;
 
   &.in {
     @include transform(translate3d(0,0,0));
   }
 
+  .flyover-content {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .close {
-    @include position(absolute, 0 0 null null);
+    @include position(fixed, 0 0 null null);
     font-size: em(40);
     padding: 0.25em;
+    z-index: 300;
+
+    &:hover {
+      color: lighten($base-font-color, 10%);
+    }
   }
 
   ul {
@@ -105,12 +119,20 @@ body.with-fixed-header {
     border-top: 1px solid transparentize($base-border-color, 0.75);
     margin-top: em(62);
 
-    @include media($medium-up) {
-      margin-top: $header-height;
-    }
-
     > li {
       border-bottom: 1px solid transparentize($base-border-color, 0.75);
+
+      > ul {
+        margin: 0;
+
+        > li {
+          margin-left: 1em;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
     }
   }
 

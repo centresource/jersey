@@ -8,10 +8,6 @@ layout: default
   </article>
 </section>
 
-<section class="up-next">
-  <div class="wrap">
-    <h6>Up Next</h6>
-    <a href="/" class="btn-with-circle">Validating Product Ideas <i class="fa fa-chevron-right"></i></a>
-    <p class="read-time">5 minute read</p>
-  </div>
-</section>
+{% if page.next_title and page.next_url %}
+  {% include shared/up-next.html %}
+{% endif %}

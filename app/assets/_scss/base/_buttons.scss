@@ -9,6 +9,7 @@ input[type="submit"] {
 
 .btn-icon {
   @extend %button;
+  @include transition(color $transition-duration ease-in-out);
   padding: 0.5em;
 }
 
@@ -16,6 +17,7 @@ input[type="submit"] {
   @extend %button;
   color: $base-link-color;
   font-family: $sans-serif;
+  line-height: 1.25em;
   text-decoration: none;
 
   &:hover > .fa {
@@ -28,13 +30,14 @@ input[type="submit"] {
     border: 1px solid $base-link-color;
     display: inline-block;
     height: em(25);
+    position: relative;
     text-align: center;
+    vertical-align: middle;
     width: em(25);
 
     &:before {
+      @include position(absolute, 6px null null 7px);
       font-size: em(14);
-      margin-left: 2px;
-      vertical-align: middle;
     }
   }
 }
