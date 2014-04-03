@@ -5,16 +5,21 @@
   "authors": [
     "David Calhoun <dcalhoun@centresource.com>"
   ],
-  "description": "Style guide for Centresource documentation.",
+  "description": "Centresource documentation style guide.",
   "main": "dist/assets/css/jersey.css",
   "keywords": [
     "centresource",
-    "styleguide"
+    "documentation",
+    "style",
+    "guide"
   ],
   "license": "MIT",
   "private": true,
   "ignore": [
     "**/.*",
+    "**/_*",
+    "**/*.md",
+    "Gemfile*",
     "node_modules",
     "app"
   ],

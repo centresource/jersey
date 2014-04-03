@@ -254,7 +254,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          dot: true,
+          dot: false,
           cwd: '<%= yeoman.app %>',
           src: [
             // Jekyll processes and moves HTML and text files
