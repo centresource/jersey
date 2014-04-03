@@ -47,23 +47,17 @@
 }
 
 .no-margin {
-  margin: 0 !important;
+  margin: 0;
 }
 
 .flush-top {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 .flush-bottom {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 .no-padding {
-  padding: 0 !important;
-}
-
-.mobile-hide {
-  @include media($small-only) {
-    display: none;
-  }
+  padding: 0;
 }

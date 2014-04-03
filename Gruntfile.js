@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         port: 9000,
         livereload: 35729,
         // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
+        hostname: '0.0.0.0'
       },
       livereload: {
         options: {
@@ -205,7 +205,7 @@ module.exports = function (grunt) {
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
-          removeRedundantAttributes: true
+          removeRedundantAttributes: false
         },
         files: [{
           expand: true,
@@ -254,7 +254,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          dot: true,
+          dot: false,
           cwd: '<%= yeoman.app %>',
           src: [
             // Jekyll processes and moves HTML and text files
@@ -263,11 +263,11 @@ module.exports = function (grunt) {
             'assets/img/**/*',
             'assets/fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore
-            '!**/_*{,/**}'
+            '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here
             //'_bower_components/jquery/jquery.js',
-            // 'favicon.ico',
-            // 'apple-touch*.png'
+            'favicon.ico',
+            'apple-touch*.png'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -286,44 +286,6 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/assets/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }
-      }
-    },
-    buildcontrol: {
-      dist: {
-        options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          remote: 'git@github.com:centresource/jersey.git',
-          branch: 'gh-pages'
-        }
-      }
-    },
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            {
-              match: /("|'?)\/?assets\//g,
-              replacement: '$1http://centresource.github.io/jersey/assets/'
-            },
-            {
-              match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://centresource.github.io/jersey/'
-            },
-            {
-              match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://centresource.github.io/jersey/'
-            }
-          ]
-        },
-        files: [
-          {
-            expand: true,
-            src: ['dist/**/*.html', 'dist/assets/js/*.js']
-          }
-        ]
       }
     },
     jshint: {
@@ -411,16 +373,13 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
+    'cssmin',
     'uglify',
-    'imagemin',
-    'svgmin',
+    // 'imagemin',
+    // 'svgmin',
+    // 'rev',
     'usemin',
-  ]);
-
-  grunt.registerTask('deploy', [
-    'default',
-    'replace',
-    'buildcontrol'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
