@@ -1,10 +1,11 @@
 # Jersey
-Jersey is a style guide for internal Centresource applications. Read the installation section for more information for getting up and running.
+Jersey is a style guide for Centresource internal and project documentation. Read the installation section for more information for getting up and running.
 
 ## Documentation
 ### Dependencies
 - Load normalize.css.
 - Load [FontAwesome](http://fortawesome.github.io/Font-Awesome/).
+- Load jQuery 2.0+.
 - Embed the Jersey Typekit found in the Centresource account.
 
 
@@ -25,7 +26,7 @@ Include Jersey assets in your HTML `<head>`:
 
 
 ### For non-Rails
-Install Jersey using Bower by including it in your `bower.json` dependencies.
+Add Jersey to your `bower.json` dependencies.
 ````javascript
 {
   "name": "My Project",
@@ -36,6 +37,7 @@ Install Jersey using Bower by including it in your `bower.json` dependencies.
 }
 ````
 
+Install via Bower.
 ````bash
 bower install
 ````
