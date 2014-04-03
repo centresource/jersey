@@ -1,114 +1,154 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Centresource Jersey</title>
-    <meta name="description" content="Jersey.">
+    <title>Jersey</title>
+    <meta name="description" content="Centresource">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,800" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/img/apple-touch-icon.png">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css"/>
+<link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
 
 <link rel="stylesheet" href="/assets/css/jersey.css">
 
 
-    <script src="/assets/js/modernizr.js"></script>
-
+    <script type="text/javascript" src="//use.typekit.net/toz2rqn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
-  <body class="markdown">
+
+  <body class="with-fixed-header">
     <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header id="header-primary" class="header-primary with-nav-user">
-  <div class="branding">
-    <h1>
+    <header id="header-primary" class="header-primary header-fixed">
+  <div class="wrap">
+    <h1 class="brand">
       <a href="/">
-        <span class="logo-cs">Centresource</span> Jersey
+        <span class="logo-cs"></span> Jersey
       </a>
     </h1>
-  </div>
 
-  <nav class="nav-user">
-    <ul>
-      <li>
-        Hello, <a href="#">Brandon Valentine</a>
-      </li>
-      <li>
-        <a href="#">Log out</a>
-      </li>
-    </ul>
-  </nav>
+    <div class="tools">
+      <button type="button" class="btn-icon" data-toggle="flyover" data-target="#nav-primary">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </div>
 </header>
 
+    <nav id="nav-primary" class="nav-flyover">
+  <button type="button" class="btn-icon close" data-dismiss="flyover">
+    <i class="fa fa-times-circle-o"></i>
+  </button>
 
-    <nav id="nav-primary" class="nav-primary">
-  <ul class="nav-menu">
-    <li class="nav-action">
-      <a href="/styles/"><i class="fa fa-book fa-fw"></i> Styles</a>
-
-      <ul class="nav-submenu">
-        <li class="nav-action-sub">
-          <a href="/styles/"><i class="fa fa-chevron-right fa-fw"></i> Examples</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-action">
-      <a href="/projects/almanac/"><i class="fa fa-flask fa-fw"></i> Projects</a>
-
-      <ul class="nav-submenu">
-        <li class="nav-action-sub">
-          <a href="/projects/almanac/"><i class="fa fa-chevron-right fa-fw"></i> Almanac</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-action">
-      <a href="#"><i class="fa fa-envelope fa-fw"></i> Messages</a>
-
-      <ul class="nav-submenu">
-        <li class="nav-action-sub">
-          <a href="#"><i class="fa fa-inbox fa-fw"></i> Inbox</a>
-        </li>
-        <li class="nav-action-sub active">
-          <a href="#"><i class="fa fa-share fa-fw"></i> Sent</a>
-        </li>
-        <li class="nav-action-sub last">
-          <a href="#"><i class="fa fa-trash-o fa-fw"></i> Deleted</a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-action">
-      <a href="#"><i class="fa fa-cog fa-fw"></i> Settings</a>
-
-      <ul class="nav-submenu">
-        <li class="nav-action-sub">
-          <a href="#"><i class="fa fa-chevron-right fa-fw"></i> General</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <div class="wrap">
+    <ul>
+      <li>
+        <a href="/">Page One</a>
+      </li>
+      <li>
+        <a href="/">Page Two</a>
+      </li>
+      <li>
+        <a href="/">Page Three</a>
+      </li>
+      <li>
+        <a href="/">Page Four</a>
+      </li>
+      <li>
+        <a href="/">Page Five</a>
+      </li>
+      <li>
+        <a href="/">Page Six</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
+    <section id="content-primary" class="content-primary">
+  <article class="post">
+    <h1>Header One</h1>
 
-    <article id="content-primary" class="content-primary">
-  <h2>Jersey</h2>
+<p>Proin dapibus risus eget mauris <a href="/">egestas ullamcorper</a>. Fusce porta nunc aliquet <strong>some bold text</strong> tincidunt. Sed in <em>italicized text</em>. Maecenas sit amet nisl egestas, dictum tortor vitae, iaculis dui. Nullam at velit sit amet nisi fermentum tincidunt. Nulla id sodales massa, nec bibendum libero. Praesent eget suscipit leo. Pellentesque rutrum, arcu at pharetra aliquet, nisi erat venenatis elit, ut varius felis erat at leo. Donec vestibulum nulla felis, at tristique felis eleifend et. Nunc et diam quis leo tincidunt vulputate et interdum orci.</p>
 
-<h1>Hi!</h1>
+<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
-<p>Welcome to Centresource Jersey. This is a colleciton of styles to keep C/S internal apps consistent. Explore and check out some examples app styles. If you&#39;d like to contribute new syles to this collection, checkout the <a href="https://github.com/centresource/jersey/blob/master/CONTRIBUTING.md">guides</a>.</p>
+<ul>
+<li>List 1</li>
+<li>List 2</li>
+<li>List 3</li>
+<li>List 4</li>
+<li>List 5</li>
+</ul>
 
-</article>
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
 
+<p><img src="http://placecorgi.com/900/500" alt="Example Image"></p>
 
-    <script src="/assets/js/app.js"></script>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+<h2>Header Two</h2>
+
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Donec sed odio dui. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.</p>
+
+<ol>
+<li>First Item</li>
+<li>Second Item</li>
+<li>Third Item</li>
+<li>Fourth Item</li>
+<li>Fifth Item</li>
+</ol>
+
+<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<blockquote>
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
+<cite>John Doe</cite></p>
+</blockquote>
+
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+<h3>Header Three</h3>
+
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Donec sed odio dui. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.</p>
+
+<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<h4>Header Four</h4>
+
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
+
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+<h5>Header Five</h5>
+
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Donec sed odio dui. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.</p>
+
+<h6>Header Six</h6>
+
+<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
+
+  </article>
+</section>
+
+<section class="up-next">
+  <div class="wrap">
+    <h6>Up Next</h6>
+    <a href="/" class="btn-with-circle">Design <i class="fa fa-chevron-right"></i></a>
+  </div>
+</section>
+
+    <script src="/_bower_components/jquery/jquery.js"></script>
+
+<script src="/assets/js/jersey.headroom.js"></script>
+
+<script src="/assets/js/jersey.flyover.js"></script>
 
   </body>
 </html>

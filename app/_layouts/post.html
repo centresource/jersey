@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
-<article id="content-primary" class="content-primary">
-  {{ content }}
-</article>
+
+<section id="content-primary" class="content-primary">
+  <article class="post">
+    {{ content }}
+  </article>
+</section>
+
+{% if page.next_title and page.next_url %}
+  {% include shared/up-next.html %}
+{% endif %}

@@ -22,126 +22,158 @@
  * ---------------------------------------------------------------------------
  */
 
+.wrap {
+  margin: 0 auto;
+  max-width: em(700);
+}
+
+
+
+
 // Header
+$header-height: em(44);
+
 .header-primary {
-  margin-bottom: em(14);
-  position: relative;
-  text-align: center;
-  @include clearfix;
+  background: $orange;
+  color: $white;
+  height: $header-height;
+  overflow: hidden;
+  padding: 0 0.5em;
 
-  @include media($medium) {
-    background: $gray-darker;
-    border-radius: $base-border-radius;
-    text-align: left;
+  .wrap {
+    @include row(table);
   }
 
-  @include media($large) {
-    margin-bottom: em(26);
+  .brand {
+    font-size: em(18);
+    @include span-columns(10, table-cell);
+
+    .logo-cs {
+      margin-right: 0.25em;
+    }
   }
 
-  @include media($x-large) {
-    margin: em(26) 0;
-    border-radius: $base-border-radius;
+  .tools {
+    text-align: right;
+    @include span-columns(2, table-cell);
   }
-}
 
-.branding,
-.nav-user {
-  height: em(68);
-  padding: em(20);
-
-  a, a:visited {
+  button {
     color: $white;
   }
+
+  a {
+    @include link-variant($white);
+    @include transition(opacity $transition-duration ease-in-out);
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+      opacity: 0.5;
+    }
+  }
 }
 
-.branding {
-  background: $gray-darker;
-  border-radius: em(6);
-}
-
-
-
-// Header with user navigation
-.header-primary.with-nav-user {
-  border-radius: em(6);
-
-  .branding,
-  .nav-user {
-    margin-right: 0;
-  }
-
-  .branding {
-    border-radius: $base-border-radius $base-border-radius 0 0;
-
-    @include media($medium) {
-      border-radius: $base-border-radius 0 0 $base-border-radius;
-      @include span-columns(5 of 12, block-collapse);
-    }
-  }
-
-  .nav-user {
-    @extend .nav-simple;
-    background: $orange;
-    border-radius: 0 0 $base-border-radius $base-border-radius;
-    color: $white;
-    display: block;
-
-    @include media($medium) {
-      border-radius: 0 $base-border-radius $base-border-radius 0;
-      float: none;
-      position: absolute;
-      right: 0;
-      text-align: right;
-      top: 0;
-      width: auto;
-
-      &:last-child {
-        width: auto;
-      }
-    }
-
-    > ul {
-      margin-top: em(7);
-
-      @include media($medium) {
-        margin-top: em(5);
-      }
-    }
-
-    a:hover, a:active {
-      text-decoration: underline;
-    }
-  }
+body.with-fixed-header {
+  padding-top: $header-height;
 }
 
 
 
 // Navigation
-.nav-primary {
-  margin-bottom: em(18);
-  @include fill-parent();
+.nav-flyover {
+  @include position(fixed, 0 0 0 0);
+  @include transform(translate3d(0, -100%, 0));
+  @include transition(all $transition-duration ease-in-out);
+  background: transparentize($white, 0.06);
+  font-family: $sans-serif;
+  height: 100%;
+  overflow: hidden;
+  z-index: 200;
 
-  @include media($large) {
-    @include span-columns(3 of 12);
+  &.in {
+    @include transform(translate3d(0,0,0));
+  }
+
+  .flyover-content {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .close {
+    @include position(fixed, 0 0 null null);
+    font-size: em(40);
+    padding: 0.25em;
+    z-index: 300;
+
+    &:hover {
+      color: lighten($base-font-color, 10%);
+    }
+  }
+
+  ul {
+    @extend %list-unstyled;
+    border-top: 1px solid transparentize($base-border-color, 0.75);
+    margin-top: em(62);
+
+    > li {
+      border-bottom: 1px solid transparentize($base-border-color, 0.75);
+
+      > ul {
+        margin: 0;
+
+        > li {
+          margin-left: 1em;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    @include link-variant($gray-dark);
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+
+    &:hover {
+      background: transparentize($gray, 0.95);
+    }
+  }
+}
+
+body.flyover-in {
+  overflow: hidden;
+
+  .header-primary,
+  .content-primary,
+  .up-next {
+    -webkit-filter: blur(2px);
   }
 }
 
 
 
 // Content
-.content-primary,
-.post {
-  @include fill-parent();
-
-  @include media($large) {
-    @include span-columns(9 of 12);
-    @include omega();
-  }
+.content-primary {
+  padding: 1em;
 }
 
-.column-header {
-  > h2:first-of-type {
-    margin-top: 0;
+.post {
+  @extend .wrap;
+}
+
+.up-next {
+  background: darken($white, 5%);
+  padding: 6em 1em;
+
+  h6 {
+    margin-bottom: 0.35em;
   }
 }

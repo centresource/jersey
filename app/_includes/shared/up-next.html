@@ -1,0 +1,9 @@
+<section class="up-next">
+  <div class="wrap">
+    <h6>Up Next</h6>
+    <a href="{{ page.next_url }}" class="btn-with-circle">{{ page.next_title }} <i class="fa fa-chevron-right"></i></a>
+    {% if page.next_length %}
+      <p class="read-time">{{ page.next_length }} minute read</p>
+    {% endif %}
+  </div>
+</section>
