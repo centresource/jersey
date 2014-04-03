@@ -22,20 +22,21 @@
  * ---------------------------------------------------------------------------
  */
 
-body.with-fixed-header {
-  padding-top: em(44);
-}
-
 .wrap {
   margin: 0 auto;
   max-width: em(700);
 }
 
-// Simple Header
+
+
+
+// Header
+$header-height: em(44);
+
 .header-primary {
   background: $orange;
   color: $white;
-  height: em(44);
+  height: $header-height;
   overflow: hidden;
   padding: 0 0.5em;
 
@@ -74,6 +75,13 @@ body.with-fixed-header {
   }
 }
 
+body.with-fixed-header {
+  padding-top: $header-height;
+}
+
+
+
+// Navigation
 .nav-flyover {
   @include position(fixed, 0 0 0 0);
   @include transform(translate3d(0, -100%, 0));
@@ -98,7 +106,7 @@ body.with-fixed-header {
     margin-top: em(62);
 
     @include media($medium-up) {
-      margin-top: em(44);
+      margin-top: $header-height;
     }
 
     > li {
@@ -118,19 +126,19 @@ body.with-fixed-header {
   }
 }
 
-
-// Active Flyover
 body.flyover-in {
   overflow: hidden;
 
   .header-primary,
   .content-primary,
   .up-next {
-    @include transition(-webkit-filter $transition-duration ease-in-out);
     -webkit-filter: blur(2px);
   }
 }
 
+
+
+// Content
 .content-primary {
   padding: 1em;
 }
@@ -142,4 +150,8 @@ body.flyover-in {
 .up-next {
   background: darken($white, 5%);
   padding: 6em 1em;
+
+  h6 {
+    margin-bottom: 0.35em;
+  }
 }

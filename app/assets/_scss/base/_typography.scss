@@ -118,3 +118,10 @@ cite {
   background: lighten($orange, 40%);
   color: darken($orange, 20%);
 }
+
+.read-time {
+  font-size: em(13);
+  font-style: italic;
+  line-height: 1.45em;
+  margin: 0;
+}

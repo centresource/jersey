@@ -31,7 +31,7 @@ Install Jersey using Bower by including it in your `bower.json` dependencies.
   "name": "My Project",
   "version": "0.0.0",
   "dependencies": {
-    "jersey": "git@github.com:centresource/jersey.git#0.1.9",
+    "jersey": "git@github.com:centresource/jersey.git#1.0.0",
   }
 }
 ````
