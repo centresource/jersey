@@ -375,11 +375,11 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'imagemin',
-    'svgmin',
-    'rev',
+    // 'imagemin',
+    // 'svgmin',
+    // 'rev',
     'usemin',
-    'htmlmin'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [

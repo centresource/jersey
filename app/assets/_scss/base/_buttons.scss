@@ -1,0 +1,38 @@
+button,
+input[type="submit"] {
+  @extend %button;
+  @include appearance(none);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-icon {
+  @extend %button;
+  padding: 0.5em;
+}
+
+.btn-with-circle {
+  font-family: $sans-serif;
+  padding: 0.5em 0;
+  text-decoration: none;
+
+  &:hover > .fa {
+    border-color: $hover-link-color;
+  }
+
+  > .fa {
+    border-radius: 50%;
+    border: 1px solid $base-link-color;
+    display: inline-block;
+    height: em(25);
+    text-align: center;
+    width: em(25);
+
+    &:before {
+      font-size: em(14);
+      margin-left: 2px;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,18 +1,14 @@
 .logo-cs {
   @include hide-text;
   background: url('../img/logo-cs-mini.png') no-repeat 0 0;
-  background-size: 22px 23px;
-  display: block;
-  height: 23px;
+  background-size: 23px 22px;
+  display: inline-block;
+  height: 22px;
   margin: 0;
-  vertical-align: middle;
-  width: 22px;
+  vertical-align: top;
+  width: 23px;
 
   @include hidpi(2) {
     background-image: url('../img/logo-cs-mini_2x.png');
-  }
-
-  a {
-    @extend %block-link;
   }
 }

@@ -1,10 +1,10 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: $helvetica;
+$sans-serif: 'proxima-nova', $helvetica;
 $serif: 'freight-text-pro', $georgia;
 
 $base-font-family: $serif;
-$header-font-family: $base-font-family;
+$header-font-family: $sans-serif;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
@@ -67,3 +67,6 @@ $base-border-color: $gray-light;
 $error-color: $red-light;
 $notice-color: $yellow-light;
 $success-color: $green-light;
+
+
+$transition-duration: 0.3s;
