@@ -18,6 +18,8 @@ input[type="submit"] {
   color: $base-link-color;
   font-family: $sans-serif;
   line-height: 1.25em;
+  padding-right: em(35);
+  position: relative;
   text-decoration: none;
 
   &:hover > .fa {
@@ -26,17 +28,18 @@ input[type="submit"] {
 
   > .fa {
     @include transition(border-color $transition-duration ease-in-out);
+    @include position(absolute, 50% 0 null null);
     border-radius: 50%;
     border: 1px solid $base-link-color;
     display: inline-block;
-    height: em(25);
-    position: relative;
+    height: em(26);
+    margin-top: em(-13);
     text-align: center;
     vertical-align: middle;
-    width: em(25);
+    width: em(26);
 
     &:before {
-      @include position(absolute, 6px null null 7px);
+      @include position(absolute, 6px null null 8px);
       font-size: em(14);
     }
   }
