@@ -176,8 +176,16 @@
 
 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
+<p>Nullam id dolor id nibh <code>ultricies vehicula</code> ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># Ruby hashes keyed by symbols should be declared using the Ruby hash syntax:</span>
+<span class="n">my_hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:key_1</span> <span class="o">=&gt;</span> <span class="s1">&#39;Here is a value&#39;</span><span class="p">,</span> <span class="ss">:key_2</span> <span class="o">=&gt;</span> <span class="s1">&#39;Here is another value&#39;</span> <span class="p">}</span>
 
+<span class="c1"># ...instead of the 1.9+ auxiliary syntax:</span>
+<span class="n">my_hash</span> <span class="o">=</span> <span class="p">{</span> <span class="n">key_1</span><span class="p">:</span> <span class="s1">&#39;Here is a value&#39;</span><span class="p">,</span> <span class="n">key_2</span><span class="p">:</span> <span class="s1">&#39;Here is another value&#39;</span> <span class="p">}</span>
+
+<span class="c1"># This also applies to final-hash method invocations and other implicit hashes</span>
+<span class="n">do_something</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">:key_1</span> <span class="o">=&gt;</span> <span class="s1">&#39;Here is a value&#39;</span><span class="p">,</span> <span class="ss">:key_2</span> <span class="o">=&gt;</span> <span class="s1">&#39;Here is another value&#39;</span>
+</code></pre></div>
   </article>
 </section>
 
