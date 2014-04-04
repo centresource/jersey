@@ -67,3 +67,5 @@ my_hash = { key_1: 'Here is a value', key_2: 'Here is another value' }
 # This also applies to final-hash method invocations and other implicit hashes
 do_something "x", 2, :key_1 => 'Here is a value', :key_2 => 'Here is another value'
 ````
+
+<h6 class="no-anchor">Header Six with No Anchor</h6>
