@@ -1,5 +1,5 @@
 # Jersey
-Jersey is a style guide for Centresource internal and project documentation. Read the installation section for more information for getting up and running.
+Jersey is a set of styles for Centresource internal and project documentation. It is primarily utilized for [Almanac](https://github.com/centresource/generator-almanac), but may be used in other sites. Read the installation section for more information for getting up and running.
 
 ## Documentation
 ### Dependencies
