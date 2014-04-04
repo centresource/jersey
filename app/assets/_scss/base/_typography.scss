@@ -114,6 +114,28 @@ cite {
   }
 }
 
+pre {
+  background: darken($white, 3%);
+  border: 1px solid darken($white, 13%);
+  line-height: 18px;
+  margin: 0 0 1em;
+  overflow: auto;
+  padding: em(10, 18);
+
+  code {
+    border: none;
+    padding: 0;
+  }
+}
+
+code {
+  background: darken($white, 3%);
+  border: 1px solid darken($white, 13%);
+  font-size: 14px;
+  padding: em(3, 14) em(7, 14);
+}
+
+
 @include selection {
   background: lighten($orange, 40%);
   color: darken($orange, 20%);

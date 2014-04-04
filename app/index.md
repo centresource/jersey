@@ -55,4 +55,15 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed o
 ###### Header Six
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
-Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
+Nullam id dolor id nibh `ultricies vehicula` ut id elit. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
+
+````ruby
+# Ruby hashes keyed by symbols should be declared using the Ruby hash syntax:
+my_hash = { :key_1 => 'Here is a value', :key_2 => 'Here is another value' }
+
+# ...instead of the 1.9+ auxiliary syntax:
+my_hash = { key_1: 'Here is a value', key_2: 'Here is another value' }
+
+# This also applies to final-hash method invocations and other implicit hashes
+do_something "x", 2, :key_1 => 'Here is a value', :key_2 => 'Here is another value'
+````
