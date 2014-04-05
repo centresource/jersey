@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+
+  &:hover .anchor-link {
+    opacity: 1;
+  }
+}
+
+.anchor-link {
+  @include transition (opacity $transition-duration ease-in-out $transition-duration);
+  font-size: 25px;
+  left: -30px;
+  opacity: 0;
+  position: absolute;
+}
