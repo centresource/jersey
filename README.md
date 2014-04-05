@@ -22,6 +22,7 @@ Include Jersey assets in your HTML `<head>`:
 <link href="stylehseet" src="path/to/jersey.css"/>
 <script src="path/to/jersey.flyover.js"></script>
 <script src="path/to/jersey.headroom.js"></script>
+<script src="path/to/jersey.anchors.js"></script>
 ````
 
 
@@ -30,9 +31,9 @@ Add Jersey to your `bower.json` dependencies.
 ````javascript
 {
   "name": "My Project",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
-    "jersey": "git@github.com:centresource/jersey.git#1.0.0",
+    "jersey": "git@github.com:centresource/jersey.git#1.0.0", // Replace with desired version
   }
 }
 ````
@@ -47,6 +48,7 @@ Include Jersey assets in your HTML `<head>`:
 <link href="stylehseet" src="path/to/jersey.css"/>
 <script src="path/to/jersey.flyover.js"></script>
 <script src="path/to/jersey.headroom.js"></script>
+<script src="path/to/jersey.anchors.js"></script>
 ````
 
 
