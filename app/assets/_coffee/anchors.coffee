@@ -6,8 +6,7 @@ class CS.Anchors
                             #content-primary h2,
                             #content-primary h3,
                             #content-primary h4,
-                            #content-primary h5,
-                            #content-primary h6"
+                            #content-primary h5"
 
     elements = document.querySelectorAll(selector)
 
