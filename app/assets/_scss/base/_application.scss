@@ -121,6 +121,7 @@ body.with-fixed-header {
 
     > li {
       border-bottom: 1px solid transparentize($base-border-color, 0.75);
+      margin-bottom: 0;
 
       > ul {
         margin: 0;
