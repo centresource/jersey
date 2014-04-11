@@ -2,10 +2,19 @@ ul, ol {
   margin-bottom: ($base-line-height * 0.9);
   padding-left: $base-line-height;
 
+  @include media($small-only) {
+    font-size: em(20);
+    line-height: 1.45em;
+  }
+
   &%list-unstyled {
     margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  > li {
+    margin-bottom: em(12);
   }
 }
 

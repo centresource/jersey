@@ -14,8 +14,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $base-font-size * 2.25; // 22 * 2.25 = 49.5px
+  font-size: $base-font-size * 2.2727; // 22 * 2.2727 = 50px
   font-weight: 700;
+  line-height: em(55, 50);
+  margin-bottom: em(8, 50);
 
   @include media($small-only) {
     font-size: $base-font-size * 1.545; // 22 * 1.545 = 34px
@@ -23,29 +25,56 @@ h1 {
 }
 
 h2 {
-  font-size: $base-font-size * 2; // 22 * 2 = 32px
+  font-size: $base-font-size * 1.4545; // 22 * 1.4545 = 32px
+  line-height: em(38, 32);
+  margin-top: em(62, 32);
+  margin-bottom: em(2, 32);
 }
 
 h3 {
-  font-size: $base-font-size * 1.75; // 22 * 1.75 = 28px
+  color: lighten($base-font-color, 35%);
+  font-size: $base-font-size * 1.3636; // 22 * 1.3636 = 30px
+  font-weight: 300;
+  line-height: em(33, 30);
+  margin-top: em(62, 30);
+
+  @include media($small-only) {
+    font-size: $base-font-size * 1.1818; // 22 * 1.1818 = 26px
+  }
 }
 
-h4 {
-  font-size: $base-font-size * 1.5; // 22 * 1.5 = 24px
-}
-
-h5 {
-  font-size: $base-font-size * 1.25; // 22 * 1.25 = 20px
-}
-
-h6 {
+h4, h5 {
   font-size: $base-font-size;
   font-weight: 400;
   text-transform: uppercase;
 }
 
+h6 {
+  color: lighten($base-font-color, 35%);
+  font-family: $serif;
+  font-size: $base-font-size * 0.909; // 22 * 0.909 = 26px
+  font-style: italic;
+  font-weight: 300;
+  line-height: em(34, 26);
+  margin-bottom: em(30, 26);
+  padding: em(20, 26) 0;
+  text-align: center;
+
+  @include media($medium-up) {
+    font-size: $base-font-size * 1.1818; // 22 * 1.1818 = 26px
+    margin-left: -10%;
+    margin-right: -10%;
+    width: 120%;
+  }
+}
+
+h1 + h3 {
+  margin-top: em(-5, 30);
+  margin-bottom: em(22, 30);
+}
+
 p {
-  margin: 0 0 ($base-line-height * 0.9);
+  margin: 0 0 em(30);
 
   @include media($small-only) {
     font-size: em(20);
@@ -118,7 +147,7 @@ pre {
   background: darken($white, 3%);
   border: 1px solid darken($white, 13%);
   line-height: 18px;
-  margin: 0 0 1em;
+  margin: 0 0 em(30);
   overflow: auto;
   padding: em(10, 18);
   white-space: pre;
