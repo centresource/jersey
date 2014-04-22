@@ -26,7 +26,8 @@ class CS.Anchors
 
           # Refine it so it makes a good ID. Makes all lowercase and hyphen separated.
           # Ex. Hello World > hello-world
-          tidyText = roughText.replace(/\s+/g, "-").toLowerCase()
+          stripSpecial = roughText.replace(/[^\s\w]+/g, "").toLowerCase()
+          tidyText = stripSpecial.replace(/\s+/g, "-").toLowerCase()
 
           # Assign it to our element.
           # Currently the setAttribute element is only supported in IE9 and above.
