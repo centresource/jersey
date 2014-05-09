@@ -62,10 +62,11 @@ Please read the [contributing guidelines](https://github.com/centresource/jersey
 4. `bundle install`
 
 ### Releases
-1. Bump the version number in `bower.json`
-2. `grunt build`
-3. Commit and tag the release
-4. Push master and tags to origin
+1. Bump the version number in `bower.json`.
+2. Build the compiled assets: `grunt build`
+3. Commit changes: `git commit -m "Version bump."`
+4. Tag the release: `git tag -a v#.#.# -m "Version #.#.#`
+5. Push commits and tags to origin: `git push origin master --tags`
 
 
 ### Grunt Tasks
