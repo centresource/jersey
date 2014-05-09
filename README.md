@@ -61,6 +61,12 @@ Please read the [contributing guidelines](https://github.com/centresource/jersey
 3. `bower install`
 4. `bundle install`
 
+### Releases
+1. Bump the version number in `bower.json`
+2. `grunt build`
+3. Commit and tag the release
+4. Push master and tags to origin
+
 
 ### Grunt Tasks
 ##### grunt serve
